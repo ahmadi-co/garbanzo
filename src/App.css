@@ -152,6 +152,7 @@ p {
 .container {
     max-width: var(--max-width-container);
     margin-inline: 1rem;
+
 }
 
 .grid {

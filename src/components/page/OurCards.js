@@ -43,7 +43,7 @@ const OurCards = () => {
   ];
 
   return (
-    <section className="our-cards">
+    <section className="our-cards" id='cards'>
       <div className="our-cards-container">
         {/* Header */}
         <div className="our-cards-header">

@@ -18,7 +18,7 @@ const AboutUs = () => {
   ];
 
   return (
-    <section className="about-us">
+    <section className="about-us" id='about'>
       <div className="about-us-container">
         {/* Header */}
         <div className="about-us-header">

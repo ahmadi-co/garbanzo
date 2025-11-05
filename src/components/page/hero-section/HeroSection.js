@@ -13,52 +13,7 @@ const HeroSection = () => {
       rightIcons: ["ethereum", "tether"], // Options: "ethereum", "tether", or empty array []
       paymentNetworks: true // true or false
     },
-    {
-      id: 2,
-      type: "cards", // Special type for card-based slide
-      cards: [
-        {
-          id: "gold",
-          title: "GOLD CARD",
-          subtitle: "(For Premium Customers)",
-          price: "X",
-          currency: "$",
-          cardColor: "yellow",
-          badge: "Premium",
-          features: [
-            "$100,000 Monthly limit",
-            "Metal Craft Card",
-            "Cheap Money Transfer"
-          ]
-        },
-        {
-          id: "physical",
-          title: "PHYSICAL CARD",
-          subtitle: "",
-          price: "20",
-          currency: "$",
-          cardColor: "blue",
-          badge: "Popular",
-          features: [
-            "$100,000 Monthly limit",
-            "Cheap Money Transfer"
-          ]
-        },
-        {
-          id: "virtual",
-          title: "VIRTUAL CARD",
-          subtitle: "",
-          price: "FREE",
-          currency: "",
-          cardColor: "gray",
-          badge: "Basic",
-          features: [
-            "$100,000 Monthly limit",
-            "Cheap Money Transfer"
-          ]
-        }
-      ]
-    },
+
     {
       id: 3,
       type: "atm", // ATM withdrawal slide
@@ -85,23 +40,6 @@ const HeroSection = () => {
       ],
       tagline: "We provide the privilege of sending money with Crypto Master in the easiest way."
     }
-    // To add more slides, uncomment and add objects below:
-    // {
-    //   id: 2,
-    //   mainHeadline: "YOUR SECOND SLIDE HEADLINE",
-    //   subHeadline: "YOUR SECOND SLIDE SUBHEADLINE",
-    //   leftIcon: "globe", // or null to hide left icon
-    //   rightIcons: ["ethereum", "tether"], // or [] to hide crypto logos
-    //   paymentNetworks: true // or false to hide payment networks
-    // },
-    // {
-    //   id: 3,
-    //   mainHeadline: "YOUR THIRD SLIDE HEADLINE",
-    //   subHeadline: "YOUR THIRD SLIDE SUBHEADLINE",
-    //   leftIcon: null,
-    //   rightIcons: [],
-    //   paymentNetworks: false
-    // }
   ]);
 
   const totalSlides = slides.length;
@@ -130,25 +68,7 @@ const HeroSection = () => {
   };
 
   return (
-    <div className="hero-section">
-      {/* Shared Animated Background Elements */}
-      <div className="animated-bg-elements">
-        {[...Array(20)].map((_, i) => (
-          <div
-            key={i}
-            className="floating-dot"
-            style={{
-              width: Math.random() * 100 + 50 + 'px',
-              height: Math.random() * 100 + 50 + 'px',
-              left: Math.random() * 100 + '%',
-              top: Math.random() * 100 + '%',
-              animationDelay: Math.random() * 10 + 's',
-              animationDuration: Math.random() * 10 + 10 + 's'
-            }}
-          />
-        ))}
-      </div>
-
+    <div className="hero-section" id='home'>
       {/* Shared Network Lines Background */}
       <svg className="network-svg-bg" xmlns="http://www.w3.org/2000/svg">
         <defs>
@@ -163,7 +83,7 @@ const HeroSection = () => {
 
       {/* Slider Container */}
       <div className="slider-container">
-        <div 
+        <div
           className="slider-wrapper"
           style={{ transform: `translateX(-${currentSlide * 100}%)` }}
         >

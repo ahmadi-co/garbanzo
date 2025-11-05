@@ -2,7 +2,7 @@
   position: relative;
   min-width: 100%;
   width: 100%;
-  min-height: 100vh;
+  min-height: auto;
   background: transparent;
   padding: 100px 60px 40px;
   display: flex;
@@ -31,6 +31,7 @@
   flex: 1;
   gap: 40px;
   margin: 40px 0;
+    margin-inline: auto;
 }
 
 /* Globe Section */
@@ -66,7 +67,7 @@
   position: absolute;
   width: 40px;
   height: 25px;
-  background: var(--primay-color);
+  background: var(--first-color);
   border: 2px solid white;
   border-radius: 4px;
   display: flex;
@@ -123,7 +124,7 @@
 }
 
 .main-headline {
-  font-size: 2.5rem;
+  font-size: calc(var(--h1-font-size) );
   font-weight: bold;
   color: white;
   text-transform: uppercase;
@@ -286,10 +287,6 @@
   .hero-slide {
     padding: 90px 40px 30px;
   }
-
-  .main-headline {
-    font-size: 2rem;
-  }
   
   .sub-headline {
     font-size: 1.5rem;
@@ -315,12 +312,11 @@
     flex-direction: column;
     gap: 30px;
   }
-  
+
   .main-headline {
-    font-size: 1.5rem;
     letter-spacing: 1px;
   }
-  
+
   .sub-headline {
     font-size: 1.2rem;
     letter-spacing: 1px;
@@ -356,10 +352,6 @@
 @media (max-width: 480px) {
   .hero-slide {
     padding: 70px 15px 20px;
-  }
-
-  .main-headline {
-    font-size: 1.2rem;
   }
   
   .sub-headline {
@@ -716,7 +708,7 @@
   }
 
   .cards-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 24px;
     max-width: 500px;
   }
@@ -769,7 +761,6 @@
   position: relative;
   z-index: 2;
   width: 100%;
-  max-width: 1400px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -785,7 +776,7 @@
 }
 
 .atm-main-headline {
-  font-size: 3.5rem;
+  font-size: var(--h1-font-size);
   font-weight: bold;
   color: white;
   margin: 0;
@@ -796,7 +787,7 @@
 }
 
 .atm-sub-headline {
-  font-size: 4.5rem;
+  font-size: var(--h1-font-size);
   font-weight: bold;
   color: #00ffff;
   margin: 0;
@@ -879,7 +870,7 @@
 /* Info Boxes */
 .atm-info-box {
   background: white;
-  border: 2px dashed #00ffff;
+  border: 2px dashed #213A80;
   border-radius: 12px;
   padding: 16px 20px;
   display: flex;
@@ -904,7 +895,7 @@
 }
 
 .atm-info-title {
-  color: #00ffff;
+  color: #213A80;
   font-size: 1rem;
   font-weight: 600;
   margin: 0;
@@ -923,14 +914,6 @@
     gap: 40px;
   }
 
-  .atm-main-headline {
-    font-size: 3rem;
-  }
-
-  .atm-sub-headline {
-    font-size: 4rem;
-  }
-
   .atm-machine-placeholder {
     max-width: 350px;
     height: 450px;
@@ -938,9 +921,6 @@
 }
 
 @media (max-width: 768px) {
-  .hero-slide-atm {
-    padding: 90px 20px 40px;
-  }
 
   .atm-wrapper {
     grid-template-columns: 1fr;
@@ -949,14 +929,6 @@
 
   .atm-content-left {
     text-align: center;
-  }
-
-  .atm-main-headline {
-    font-size: 2rem;
-  }
-
-  .atm-sub-headline {
-    font-size: 2.5rem;
   }
 
   .atm-machine-placeholder {
@@ -971,17 +943,12 @@
 }
 
 @media (max-width: 480px) {
-  .hero-slide-atm {
-    padding: 80px 15px 30px;
-  }
 
   .atm-main-headline {
-    font-size: 1.5rem;
     letter-spacing: 1px;
   }
 
   .atm-sub-headline {
-    font-size: 2rem;
     letter-spacing: 2px;
   }
 
@@ -1028,28 +995,8 @@
   animation: fadeInLeft 0.8s ease 0.2s both;
 }
 
-.transfer-brand {
-  display: flex;
-  align-items: baseline;
-  gap: 8px;
-}
-
-.transfer-brand-crypto {
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: white;
-  letter-spacing: 1px;
-}
-
-.transfer-brand-master {
-  font-size: 1.8rem;
-  font-weight: normal;
-  color: white;
-  letter-spacing: 1px;
-}
-
 .transfer-main-headline {
-  font-size: 3rem;
+  font-size: calc(var(--h1-font-size) + .5rem);
   font-weight: bold;
   color: white;
   margin: 0;
@@ -1163,19 +1110,22 @@
 }
 
 /* Responsive Design for Transfer Slide */
-@media (max-width: 1200px) {
+@media (max-width: 1250px) {
+
+    .transfer-content-right {
+        display: none;
+    }
+}
+
+@media (max-width: 1250px) {
   .transfer-wrapper {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 30px;
   }
 
   .transfer-content-right {
-    grid-column: 1 / -1;
-    justify-self: center;
-  }
 
-  .transfer-main-headline {
-    font-size: 2.5rem;
+      display: none;
   }
 
   .transfer-graph-container {
@@ -1198,18 +1148,6 @@
     text-align: center;
   }
 
-  .transfer-main-headline {
-    font-size: 2rem;
-  }
-
-  .transfer-brand-crypto {
-    font-size: 2rem;
-  }
-
-  .transfer-brand-master {
-    font-size: 1.5rem;
-  }
-
   .transfer-features-box {
     padding: 20px 24px;
   }
@@ -1227,19 +1165,6 @@
 @media (max-width: 480px) {
   .hero-slide-transfer {
     padding: 80px 15px 30px;
-  }
-
-  .transfer-main-headline {
-    font-size: 1.5rem;
-    letter-spacing: 0.5px;
-  }
-
-  .transfer-brand-crypto {
-    font-size: 1.75rem;
-  }
-
-  .transfer-brand-master {
-    font-size: 1.25rem;
   }
 
   .transfer-features-box {

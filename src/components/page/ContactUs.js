@@ -33,7 +33,7 @@ const ContactUs = () => {
   };
 
   return (
-    <section className="contact-us">
+    <section className="contact-us" id='contact'>
       <div className="contact-us-container">
         {/* Header */}
         <div className="contact-us-header">
