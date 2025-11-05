@@ -31,7 +31,7 @@ const HeroSection = () => {
     {
       id: 4,
       type: "transfer", // Money transfer features slide
-      mainHeadline: "Safe Money Transfer With Low Commission",
+      mainHeadline: "Safe Money Transfer With Low ",
       highlightWord: "Commission",
       features: [
         "Send Money to Your Country Easily",
@@ -50,7 +50,7 @@ const HeroSection = () => {
     
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % totalSlides);
-    }, 10000000); // Change slide every 5 seconds
+    }, 10000); // Change slide every 5 seconds
 
     return () => clearInterval(interval);
   }, [totalSlides]);

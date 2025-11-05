@@ -166,6 +166,7 @@
   flex-direction: column;
   gap: 30px;
   align-items: center;
+
 }
 
 .crypto-logo {
@@ -208,7 +209,12 @@
   gap: 40px;
   flex-wrap: wrap;
   margin-top: 40px;
+    background-color: hwb(0 6.7% 93.3% / 0.32);
+    width: max-content;
+    margin-inline: auto;
+    padding: var(--normal-font-size);
   animation: fadeIn 0.8s ease 0.8s both;
+    border-radius: 20px;
 }
 
 @keyframes fadeIn {
