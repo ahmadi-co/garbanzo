@@ -19,7 +19,7 @@ const AboutUs = () => {
 
   return (
     <section className="about-us" id='about'>
-      <div className="about-us-container">
+      <div className="about-us-container container">
         {/* Header */}
         <div className="about-us-header">
           <h2 className="about-us-title">About Crypto Master Exchange</h2>

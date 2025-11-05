@@ -37,7 +37,7 @@ const WhyChooseUs = () => {
 
   return (
     <section className="why-choose-us" id='why-us'>
-      <div className="why-choose-us-container">
+      <div className="why-choose-us-container container">
         {/* Header */}
         <div className="why-choose-us-header">
           <h2 className="why-choose-us-title">Why Choose Us</h2>

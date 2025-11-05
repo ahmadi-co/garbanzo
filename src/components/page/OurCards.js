@@ -14,7 +14,6 @@ const OurCards = () => {
       price: "X",
       currency: "$",
       cardColor: "gold",
-      badge: "Premium"
     },
     {
       id: "physical",
@@ -26,7 +25,6 @@ const OurCards = () => {
       price: "20",
       currency: "$",
       cardColor: "blue",
-      badge: "Popular"
     },
     {
       id: "virtual",
@@ -38,13 +36,12 @@ const OurCards = () => {
       price: "FREE",
       currency: "",
       cardColor: "gray",
-      badge: "Basic"
     }
   ];
 
   return (
-    <section className="our-cards" id='cards'>
-      <div className="our-cards-container">
+    <section className="our-cards section" id='cards'>
+      <div className="our-cards-container container">
         {/* Header */}
         <div className="our-cards-header">
           <h2 className="our-cards-title">Our Cards</h2>

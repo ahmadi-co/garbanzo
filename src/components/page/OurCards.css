@@ -1,7 +1,7 @@
 .our-cards {
   position: relative;
   width: 100%;
-  padding: 100px 60px;
+  padding-block: 100px ;
     background: linear-gradient(135deg, #213A80 0%, #312e81 50%, #312e81 100%);
   overflow: hidden;
 }
@@ -22,8 +22,6 @@
 .our-cards-container {
   position: relative;
   z-index: 2;
-  max-width: 1400px;
-  margin: 0 auto;
 }
 
 /* Header */
@@ -46,7 +44,6 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 40px;
-  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -108,32 +105,6 @@
 
 .our-card-gray {
   border-top: 4px solid #9ca3af;
-}
-
-/* Card Badge */
-.our-card-badge {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  color: white;
-  font-size: 0.75rem;
-  font-weight: bold;
-  padding: 6px 14px;
-  border-radius: 20px;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.badge-gold {
-  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
-}
-
-.badge-blue {
-  background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
-}
-
-.badge-gray {
-  background: linear-gradient(135deg, #9ca3af 0%, #6b7280 100%);
 }
 
 /* Card Title */
@@ -286,7 +257,7 @@
 /* Responsive Design */
 @media (max-width: 1200px) {
   .our-cards {
-    padding: 80px 40px;
+    padding-block: 80px;
   }
 
   .our-cards-grid {
@@ -297,7 +268,7 @@
 
 @media (max-width: 768px) {
   .our-cards {
-    padding: 60px 20px;
+    padding-block: 60px ;
   }
 
   .our-cards-header {
@@ -325,7 +296,7 @@
 
 @media (max-width: 480px) {
   .our-cards {
-    padding: 50px 15px;
+    padding-block: 50px;
   }
 
   .our-cards-title {

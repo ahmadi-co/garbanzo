@@ -20,7 +20,6 @@ export default function Footer() {
         }
 
         .footer-container {
-          max-width: 1200px;
           margin: 0 auto;
         }
 
@@ -197,7 +196,7 @@ export default function Footer() {
       `}</style>
 
             <footer className="footer">
-                <div className="footer-container">
+                <div className="footer-container container">
                     <div className="footer-content">
                         {/* Company Info */}
                         <div className="footer-section">
