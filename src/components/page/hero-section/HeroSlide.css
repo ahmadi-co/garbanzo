@@ -222,7 +222,6 @@
 .payment-logo {
   display: flex;
   align-items: center;
-    background-color: red;
   gap: 10px;
   color: white;
 }
