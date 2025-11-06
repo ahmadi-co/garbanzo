@@ -50,7 +50,7 @@ const HeroSection = () => {
     
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % totalSlides);
-    }, 10000); // Change slide every 5 seconds
+    }, 10000000); // Change slide every 5 seconds
 
     return () => clearInterval(interval);
   }, [totalSlides]);

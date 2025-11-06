@@ -59,7 +59,7 @@ export default function Header() {
         .nav-link {
           color: #e5e7eb;
           text-decoration: none;
-          font-size: 1rem;
+          font-size: var(--normal-font-size);
           font-weight: 500;
           transition: all 0.3s ease;
           position: relative;

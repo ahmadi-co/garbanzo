@@ -321,6 +321,7 @@
 
   .main-headline {
     letter-spacing: 1px;
+      font-size: var(--h2-font-size);
   }
 
   .sub-headline {
@@ -359,10 +360,6 @@
   .hero-slide {
     padding: 70px 15px 20px;
   }
-  
-  .sub-headline {
-    font-size: 1rem;
-  }
 
   .globe-container {
     width: 120px;
@@ -377,6 +374,12 @@
   .crypto-logo svg {
     width: 40px;
     height: 40px;
+  }
+
+  .headlines-section h1 {
+      max-width: 320px;
+      background-color: red;
+      margin-inline: auto;
   }
 }
 
@@ -757,7 +760,7 @@
 /* ATM Slide Styles */
 .hero-slide-atm {
   background: transparent;
-  padding: 100px 60px 40px;
+  padding: 50px 35px 40px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1141,8 +1144,8 @@
 }
 
 @media (max-width: 768px) {
-  .hero-slide-transfer {
-    padding: 90px 20px 40px;
+  .hero-slide-transfer, .hero-slide-atm {
+    padding: 90px 30px 40px;
   }
 
   .transfer-wrapper {
@@ -1169,8 +1172,8 @@
 }
 
 @media (max-width: 480px) {
-  .hero-slide-transfer {
-    padding: 80px 15px 30px;
+  .hero-slide-transfer, .hero-slide-atm {
+    padding: 80px 30px 30px;
   }
 
   .transfer-features-box {

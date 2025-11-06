@@ -11,11 +11,8 @@ const HeroSlide = ({ slide, isActive }) => {
                 {/* Left Side - Brand and Main Slogan */}
                 <div className="transfer-content-left">
                     <h1 className="transfer-main-headline">
-
                         {slide.mainHeadline}
-
                         <span className="transfer-highlight">{slide.highlightWord}</span>
-
                     </h1>
                 </div>
 
