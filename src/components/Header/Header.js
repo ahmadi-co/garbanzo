@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useState} from "react";
 import './Header.css'
 import { FaBars, FaTimes } from "react-icons/fa";
 import logo from "../../assets/header/logo.png";
