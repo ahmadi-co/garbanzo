@@ -23,22 +23,6 @@
     .vwb-svg {
         filter: none !important;
         opacity: 0.4;
+        display: none
     }
 }
-
-@media (prefers-reduced-motion: reduce) {
-    .vwb-svg animate {
-        animation: none !important;
-    }
-}
-
-@keyframes waveMove {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-20px); }
-}
-
-.vwb-svg path {
-    animation: waveMove 8s ease-in-out infinite;
-}
-
-
