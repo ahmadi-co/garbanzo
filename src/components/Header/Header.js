@@ -47,7 +47,7 @@ export default function Header() {
                         {mobileMenuOpen ? <FaTimes size={28} /> : <FaBars size={28} />}
                     </button>
 
-                    <nav className="nav">
+                    <nav className={`nav ${mobileMenuOpen ? "open" : ""}`}>
                         {mobileMenuOpen && (
                             <button
                                 className="close-button"
