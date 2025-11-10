@@ -168,7 +168,7 @@
 /* Responsive Design */
 @media (max-width: 1200px) {
     .contact-us {
-        padding: 80px 40px;
+        padding: 140px 40px;
     }
 }
 
@@ -179,7 +179,7 @@
     }
 
     .contact-us {
-        padding: 60px 20px;
+        padding: 120px 20px;
     }
 
     .contact-us-header {
@@ -205,7 +205,7 @@
 
 @media (max-width: 480px) {
     .contact-us {
-        padding: 50px 15px;
+        padding: 100px 15px;
     }
 
     .contact-us-title {
