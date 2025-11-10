@@ -2,6 +2,7 @@ import React,{useState} from 'react';
 import './HeroSlide.css';
 import {useNavigate} from "react-router-dom";
 import HeroGoldCard from "./herocards";
+import DynamicDotsBackground from "../../components/BlobBackground/DynamicDotsBackground";
 
 const HeroSlide = ({slide, isActive}) => {
     const navigate = useNavigate();
@@ -69,6 +70,8 @@ const HeroSlide = ({slide, isActive}) => {
                         {/* Right Side - Arrow Graph Placeholder */}
                         <div className="transfer-content-right">
                             <div className="transfer-graph-container">
+                                <DynamicDotsBackground/>
+
                                 <img
                                     src={require('../../assets/hero-section/hero-section-01.png')}
                                     alt="Arrow Graph"
@@ -180,6 +183,13 @@ const HeroSlide = ({slide, isActive}) => {
                         {slide.rightIcons.includes('tether') && (
                             <div className="crypto-logo tether">
                                 <img src={require('../../assets/hero-section/ethereum.png')} alt="Arrow Graph"
+                                     className="transfer-graph-image"/>
+                            </div>
+                        )}
+
+                        {slide.rightIcons.includes('tether') && (
+                            <div className="crypto-logo usd">
+                                <img src={require('../../assets/hero-section/usd.png')} alt="Arrow Graph"
                                      className="transfer-graph-image"/>
                             </div>
                         )}

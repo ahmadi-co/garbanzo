@@ -102,6 +102,11 @@
         padding-block: 1.5rem;
     }
 
+    .hs-card-title {
+        font-size: var(--h3-font-size);
+    }
+
+
     .info-card:nth-child(3) {
         width: 280px;
         height: 180px;
@@ -142,10 +147,6 @@
         width: 320px;
         height: 220px;
         grid-column: auto;
-    }
-
-    .hs-card-title {
-        font-size: var(--normal-font-size);
     }
 
     .hs-card {
