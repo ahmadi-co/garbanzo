@@ -1,6 +1,6 @@
 .our-cards {
     position: relative;
-    padding-top: var(--header-height);
+    padding-block: 125px;
 }
 
 /* Animated background elements */
@@ -265,7 +265,7 @@
 /* Responsive Design */
 @media (max-width: 1200px) {
     .our-cards {
-        padding-block: 80px;
+        padding-block: 120px;
     }
 
     .our-cards-grid {
@@ -276,7 +276,7 @@
 
 @media (max-width: 768px) {
     .our-cards {
-        padding-block: 60px;
+        padding-block: 115px;
     }
 
     .our-cards-header {
@@ -304,7 +304,7 @@
 
 @media (max-width: 480px) {
     .our-cards {
-        padding-block: 50px;
+        padding-block: 110px;
     }
 
     .our-cards-title {
