@@ -1,0 +1,164 @@
+.gold-card__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gold-card {
+    position: relative;
+    width: 100%;
+    max-width: 420px;
+    aspect-ratio: 1.586;
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 50%, #b45309 100%);
+    border-radius: 16px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    color: white;
+}
+
+.gold-card__dots {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.gold-card__content {
+    position: relative;
+    height: 100%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.gold-card__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.gold-card__label {
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    opacity: 0.9;
+    margin-bottom: 4px;
+}
+
+.gold-card__braille {
+    display: flex;
+    gap: 4px;
+}
+
+.gold-card__dot {
+    width: 4px;
+    height: 4px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+}
+
+.gold-card__chip {
+    width: 50px;
+    height: 40px;
+    background: linear-gradient(135deg, #fef3c7 0%, #fde047 100%);
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    padding: 4px;
+}
+
+.gold-card__chip-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    height: 100%;
+}
+
+.gold-card__chip-square {
+    background-color: rgba(217, 119, 6, 0.3);
+    border-radius: 2px;
+}
+
+.gold-card__number {
+    font-family: 'Courier New', monospace;
+    font-size: var(--small-font-size);
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+.gold-card__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.gold-card__name {
+    text-align: right;
+}
+
+.gold-card__small-label {
+    font-size: 0.7rem;
+    opacity: 0.7;
+    margin-bottom: 4px;
+}
+
+.gold-card__value {
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+/* ---------- RESPONSIVE STYLES ---------- */
+
+@media (max-width: 768px) {
+    .gold-card {
+        max-width: 320px;
+    }
+
+    .gold-card__content {
+        padding: 1.5rem;
+    }
+
+    .gold-card__number {
+    }
+
+    .gold-card__chip {
+        width: 40px;
+        height: 30px;
+    }
+
+    .gold-card__label {
+        font-size: 0.7rem;
+    }
+
+    .gold-card__value {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .gold-card {
+        max-width: 280px;
+    }
+
+    .gold-card__content {
+        padding: 1rem;
+    }
+
+    .gold-card__number {
+        letter-spacing: 2px;
+    }
+
+    .gold-card__chip {
+        width: 35px;
+        height: 25px;
+    }
+
+    .gold-card__label {
+        font-size: 0.6rem;
+    }
+
+    .gold-card__value {
+        font-size: 0.7rem;
+    }
+}

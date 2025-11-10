@@ -2,9 +2,8 @@
 /* -------------------- VARIABLES CSS -------------------- */
 :root {
 
-    --header-top: 7.5rem;
     --header-height: 4.7rem;
-    --breadcrumb-height: 6rem;
+    --footer-height: 50rem;
 
     --max-width-container: 1400px;
 
@@ -31,7 +30,7 @@
     --h4-font-size: 1rem;
     --normal-font-size: 1rem;
     --small-font-size: .813rem;
-    --smaller-font-size: .75rem;
+    --smaller-font-size: .500rem;
 
     /*= ---- Font weight ---- */
     --font-regular: 400;
@@ -62,12 +61,11 @@
 @media screen and (min-width: 768px) {
     :root {
         --header-height: 7rem;
-    }
-
-    :root {
+        --footer-height: 30rem;
         --normal-font-size: 1.1rem;
         --line-height: 2rem;
     }
+
 }
 
 @media screen and (min-width: 1024px) {
@@ -80,7 +78,7 @@
         --h3-font-size: 1.5rem;
         --h4-font-size: 1.3rem;
         --small-font-size: .875rem;
-        --smaller-font-size: .813rem;
+        --smaller-font-size: .600rem;
 
         /* icon */
         --header-icon-size: 1.7rem;
@@ -182,11 +180,9 @@ p {
     color: var(--first-color);
 }
 
-
-
 .main {
-    /*margin-top:  var(--header-height);*/
-    margin-top: calc(var(--header-top) + var(--header-height));
+    padding-bottom: var(--footer-height);
+    position: relative;
 }
 
 /* BUTTON -------- */

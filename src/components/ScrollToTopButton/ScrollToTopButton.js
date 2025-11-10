@@ -29,7 +29,6 @@ export default function ScrollToTopButton() {
         <button
             className={`scroll-to-top ${isVisible ? "visible" : ""}`}
             onClick={scrollToTop}
-            aria-label="Scroll to top"
         >
             <FaArrowUp />
         </button>

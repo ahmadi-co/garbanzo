@@ -1,26 +1,34 @@
 import React from 'react';
 import './App.css';
-import HeroSection from './components/page/hero-section/HeroSection';
-import WhyChooseUs from './components/page/why-us/WhyChooseUs';
-import OurCards from './components/page/our-cards/OurCards';
-import AboutUs from './components/page/about-us/AboutUs';
-import ContactUs from './components/page/contat-us/ContactUs';
+import {BrowserRouter, Route, Routes} from 'react-router-dom';
+import OurCards from './page/our-cards/OurCards';
+import ContactUs from './page/contat-us/ContactUs';
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import ScrollToTopButton from "./components/ScrollToTopButton/ScrollToTopButton";
+import Home from "./page/home/Home";
+import ScrollToTop from "./utils/ScrollToTop";
 
 function App() {
   return (
-    <>
+    <BrowserRouter>
         <Header/>
-        <HeroSection />
-        <WhyChooseUs />
-        <OurCards />
-        <AboutUs />
-        <ContactUs />
+        <Routes>
+            <Route
+                path="/"
+                element={
+                    <Home/>
+                }
+            />
+
+            <Route path='/cards' element={<OurCards/>} />
+            <Route path='/contact' element={<ContactUs/>} />
+        </Routes>
+
         <Footer/>
+        <ScrollToTop/>
         <ScrollToTopButton/>
-    </>
+    </BrowserRouter>
   );
 }
 

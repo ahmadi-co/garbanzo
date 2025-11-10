@@ -1,0 +1,243 @@
+.physical-card__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    max-width: 440px;
+    aspect-ratio: 1.586;
+    transform-style: preserve-3d;
+    transition: transform 0.8s;
+}
+
+/* ============ Front Side ============ */
+.physical-card__front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
+    border-radius: 16px;
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.6),
+    inset 0 0 40px rgba(255, 255, 255, 0.05);
+    overflow: hidden;
+}
+
+/* ============ Layers ============ */
+.physical-card__metallic-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 30% 30%, rgba(100,100,100,0.3) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.physical-card__pattern {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.4;
+}
+
+/* ============ Content ============ */
+.physical-card__content {
+    position: relative;
+    height: 100%;
+    padding: 2rem;
+    padding-block: 1rem .3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: white;
+}
+
+/* ============ Top Section ============ */
+.physical-card__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.physical-card__bank-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.physical-card__logo-circle {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #cbd5e0 0%, #94a3b8 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #1a1a1a;
+}
+
+.physical-card__logo-text {
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #cbd5e0;
+}
+
+.physical-card__contactless {
+    opacity: 0.7;
+    transform: rotate(90deg);
+}
+
+/* ============ Chip ============ */
+.physical-card__chip-container {
+    margin-block: 2px 5px;
+}
+
+.physical-card__chip {
+    width: 55px;
+    height: 44px;
+    background: linear-gradient(135deg, #e5e7eb 0%, #d1d5db 50%, #9ca3af 100%);
+    border-radius: 8px;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.3),
+    0 2px 8px rgba(0,0,0,0.4);
+    padding: 3px;
+}
+
+.physical-card__chip-inner {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.physical-card__chip-pattern {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px;
+    padding: 3px;
+    height: 100%;
+}
+
+.physical-card__chip-cell {
+    background-color: rgba(180, 83, 9, 0.3);
+    border-radius: 1px;
+}
+
+/* ============ Card Number & Details ============ */
+.physical-card__number {
+    font-family: 'Courier New', monospace;
+    font-size: var(--small-font-size);
+    letter-spacing: 4px;
+    font-weight: bold;
+    color: #e2e8f0;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    word-break: break-all;
+}
+
+.physical-card__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+
+.physical-card__detail-section--right {
+    text-align: right;
+}
+
+.physical-card__detail-label {
+    font-size: 0.55rem;
+    letter-spacing: 1px;
+    color: #94a3b8;
+    margin-bottom: 4px;
+}
+
+.physical-card__detail-value {
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #e2e8f0;
+}
+
+/* ============ Mastercard Logo ============ */
+.physical-card__network-logo {
+    margin-right: 0;
+    width: max-content;
+    align-self: flex-end;
+    display: flex;
+}
+
+.physical-card__mastercard-circle {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    opacity: 0.9;
+}
+
+.physical-card__mastercard-circle--red {
+    background-color: #eb001b;
+}
+
+.physical-card__mastercard-circle--orange {
+    background-color: #f79e1b;
+    margin-left: -1rem;
+}
+
+/* ============ Responsive Design ============ */
+@media (max-width: 768px) {
+    .physical-card__wrapper {
+        max-width: 350px;
+    }
+
+    .physical-card__content {
+        padding: 1.5rem;
+    }
+
+    .physical-card__chip {
+        width: 40px;
+        height: 30px;
+    }
+
+    .physical-card__detail-value {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .physical-card__wrapper {
+        max-width: 280px;
+    }
+
+    .physical-card__content {
+        padding: 1.2rem;
+    }
+
+    .physical-card__number {
+        letter-spacing: 2px;
+    }
+
+    .physical-card__logo-circle {
+        width: 1.6rem;
+        height: 1.6rem;
+        font-size: 0.9rem;
+    }
+
+    .physical-card__logo-text {
+        font-size: 0.7rem;
+        letter-spacing: 1px;
+    }
+
+    .physical-card__mastercard-circle {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    .physical-card__network-logo {
+        bottom: 1.2rem;
+        right: 1.2rem;
+    }
+}

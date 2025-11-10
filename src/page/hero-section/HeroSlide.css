@@ -1,0 +1,910 @@
+.hero-slide {
+    position: relative;
+    min-width: 100%;
+    width: 100%;
+}
+
+.hero-slide.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+/* Banner Content */
+.banner-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    margin-inline: auto;
+}
+
+/* Globe Section */
+.globe-section {
+    flex: 0 0 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.globe-container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+
+.globe {
+    width: 100%;
+    height: 100%;
+    animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.banknote {
+    position: absolute;
+    width: 40px;
+    height: 25px;
+    padding: 1rem;
+    background: var(--first-color);
+    border: 2px solid white;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    z-index: 3;
+    animation: float 6s ease-in-out infinite;
+}
+
+.banknote-1 {
+    top: 10%;
+    left: -10%;
+    animation-delay: 0s;
+}
+
+.banknote-2 {
+    top: 50%;
+    right: -10%;
+    animation-delay: 1s;
+}
+
+.banknote-3 {
+    bottom: 20%;
+    left: 10%;
+    animation-delay: 2s;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0) translateX(0);
+    }
+    25% {
+        transform: translateY(-20px) translateX(10px);
+    }
+    50% {
+        transform: translateY(-10px) translateX(-10px);
+    }
+    75% {
+        transform: translateY(-30px) translateX(5px);
+    }
+}
+
+/* Headlines Section */
+.headlines-section {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 2;
+}
+
+.main-headline {
+    font-size: calc(var(--h1-font-size));
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin: 0;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+    transform: perspective(500px) rotateY(-2deg);
+    line-height: 1.2;
+    animation: fadeInUp 0.8s ease 0.2s both;
+}
+
+.banner-sub-headline {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #00ffff;
+    max-width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    transform: perspective(500px) rotateY(-2deg);
+    animation: fadeInUp 0.8s ease 0.4s both;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px) perspective(500px) rotateY(-2deg);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) perspective(500px) rotateY(-2deg);
+    }
+}
+
+/* Crypto Section */
+.crypto-section {
+    flex: 0 0 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+
+}
+
+.crypto-logo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    animation: fadeInScale 0.6s ease 0.6s both;
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.crypto-logo.ethereum {
+    background: linear-gradient(135deg, #627eea 0%, #8b9df0 100%);
+}
+
+.crypto-logo.tether {
+    background: linear-gradient(135deg, #26a17b 0%, #4caf50 100%);
+}
+
+/* Payment Networks */
+.payment-networks {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    background-color: hwb(0 6.7% 93.3% / 0.32);
+    width: max-content;
+    margin-inline: auto;
+    padding: var(--normal-font-size);
+    animation: fadeIn 0.8s ease 0.8s both;
+    margin-top: 20px;
+    border-radius: 20px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.payment-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+}
+
+.payment-logo img {
+    width: 80px;
+}
+
+.sepa-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.sepa-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: black;
+    background: white;
+    padding: 5px 15px;
+    border-radius: 4px;
+}
+
+.sepa-instant {
+    font-size: 0.8rem;
+    color: white;
+    background: #4a90e2;
+    padding: 3px 10px;
+    border-radius: 3px;
+}
+
+
+.fedwire-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.fedwire-tagline {
+    font-size: 0.7rem;
+    color: white;
+    font-style: italic;
+}
+
+.swift-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.swift-logo span {
+    color: #808080;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .banner-sub-headline {
+        font-size: 1.5rem;
+    }
+
+    .globe-section {
+        flex: 0 0 150px;
+    }
+
+    .globe-container {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media (max-width: 768px) {
+    .banner-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .main-headline {
+        letter-spacing: 1px;
+        font-size: var(--h2-font-size);
+    }
+
+    .banner-sub-headline {
+        max-width: 270px;
+        margin-inline: auto;
+        word-break: break-all;
+        font-size: 1.2rem;
+        letter-spacing: 1px;
+    }
+
+    .payment-networks {
+        gap: 20px;
+    }
+
+    .globe-section {
+        flex: 0 0 auto;
+    }
+
+    .globe-container {
+        width: 150px;
+        height: 150px;
+    }
+
+    .crypto-section {
+        flex-direction: row;
+        flex: 0 0 auto;
+    }
+
+    .payment-logo {
+        gap: 10px;
+    }
+
+    .payment-logo img {
+        width: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+
+
+    .globe-container {
+        width: 120px;
+        height: 120px;
+    }
+
+    .crypto-logo {
+        width: 60px;
+        height: 60px;
+    }
+
+    .crypto-logo svg {
+        width: 40px;
+        height: 40px;
+    }
+
+    .headlines-section h1 {
+        max-width: 320px;
+        margin-inline: auto;
+    }
+}
+
+/* Card-based Slide Styles */
+.hero-slide-cards {
+    background: transparent;
+    position: relative;
+}
+
+/* Cards Grid */
+.hero-slide-cards-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-slide-title {
+    font-size: var(--h2-font-size);
+    text-transform: uppercase;
+    color: white;
+    text-align: center;
+}
+
+
+/* Card CTA Button */
+.cta-yellow {
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+}
+
+.cta-blue {
+    background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+}
+
+.cta-gray {
+    background: linear-gradient(135deg, #9ca3af 0%, #6b7280 100%);
+}
+
+.crypto-button {
+    position: relative;
+    width: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 30px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    background: linear-gradient(135deg, #667eea 0%, #4d6199 50%, #2c4486 100%);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 0px 7px hsla(294 92.9% 100% / 0.30);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-inline: auto;
+    margin-top: 1rem;
+}
+
+.crypto-button.hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(102, 126, 234, 0.6);
+}
+
+.crypto-button.active {
+    transform: translateY(0);
+    box-shadow: 0 2px 10px rgba(102, 126, 234, 0.4);
+}
+
+.shine {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s ease;
+}
+
+.shine.active {
+    left: 100%;
+}
+
+.icon {
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (min-width: 480px) {
+    .hero-slide-title {
+        font-size: var(--big-font-size);
+    }
+
+    .crypto-button {
+        padding: 16px 48px;
+        margin-top: 3rem;
+
+    }
+}
+
+/* ATM Slide Styles */
+.hero-slide-atm {
+    background: transparent;
+    padding: 50px 35px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.atm-wrapper {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+/* Left Side Content */
+.atm-content-left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.atm-main-headline {
+    font-size: calc(var(--h1-font-size) + .5rem);
+    font-weight: bold;
+    color: white;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 1.2;
+    animation: fadeInLeft 0.8s ease 0.2s both;
+}
+
+.atm-sub-headline {
+    font-size: var(--h1-font-size);
+    font-weight: bold;
+    color: #00ffff;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    line-height: 1.1;
+    animation: fadeInLeft 0.8s ease 0.4s both;
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Right Side Content */
+.atm-content-right {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+}
+
+/* ATM Machine Placeholder */
+.atm-machine-placeholder {
+    width: 100%;
+    max-width: 400px;
+    height: 500px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    position: relative;
+    animation: fadeInRight 0.8s ease 0.3s both;
+}
+
+.atm-placeholder-text {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.atm-placeholder-text p {
+    margin: 5px 0;
+    font-size: 1rem;
+}
+
+.atm-placeholder-hint {
+    font-size: 0.85rem !important;
+    color: rgba(255, 255, 255, 0.4) !important;
+    font-style: italic;
+}
+
+.atm-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.atm-machine-image {
+    justify-self: end;
+}
+
+.atm-machine-img {
+    width: 200px;
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Info Boxes */
+.atm-info-box {
+    background: white;
+    border: 2px dashed #213A80;
+    border-radius: 12px;
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    animation: fadeInUp 0.6s ease both;
+}
+
+.atm-info-box-top {
+    animation-delay: 0.5s;
+}
+
+.atm-info-box-bottom {
+    animation-delay: 0.7s;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.atm-play-icon {
+    flex-shrink: 0;
+}
+
+.atm-info-title {
+    color: #213A80;
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.atm-info-text {
+    color: #374151;
+    font-size: 0.95rem;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Responsive Design for ATM Slide */
+@media (max-width: 1200px) {
+    .atm-wrapper {
+        gap: 16px;
+    }
+
+    .atm-content {
+        flex-direction: row;
+    }
+
+    .atm-machine-img {
+        width: 80px;
+    }
+
+    .atm-machine-placeholder {
+        max-width: 350px;
+        height: 450px;
+    }
+}
+
+@media (max-width: 768px) {
+    .atm-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .atm-machine-img {
+        width: 60px;
+    }
+
+    .atm-content-left {
+        text-align: center;
+    }
+
+    .atm-machine-placeholder {
+        max-width: 300px;
+        height: 400px;
+        margin: 0 auto;
+    }
+
+    .atm-info-box {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .atm-main-headline {
+        font-size: var(--h1-font-size);
+        letter-spacing: 1px;
+    }
+
+    .atm-sub-headline {
+        letter-spacing: 2px;
+    }
+
+    .atm-machine-placeholder {
+        max-width: 250px;
+        height: 350px;
+    }
+
+    .atm-info-box {
+        padding: 12px 16px;
+    }
+
+    .atm-info-text {
+        font-size: 0.85rem;
+    }
+}
+
+/* Transfer Slide Styles */
+.hero-slide-transfer {
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.transfer-wrapper {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+/* Left Side - Brand and Headline */
+.transfer-content-left {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    animation: fadeInLeft 0.8s ease 0.2s both;
+}
+
+.transfer-main-headline {
+    font-size: calc(var(--h1-font-size) + .5rem);
+    font-weight: bold;
+    color: white;
+    margin: 0;
+    line-height: 1.3;
+    letter-spacing: 1px;
+}
+
+.transfer-highlight {
+    color: #00ffff;
+}
+
+/* Middle - Features Box */
+.transfer-content-middle {
+    display: flex;
+    flex-direction: column;
+    padding-inline: 1.5rem;
+    gap: 20px;
+    animation: fadeInUp 0.8s ease 0.4s both;
+}
+
+.transfer-features-box {
+    background: rgba(30, 58, 138, 0.55);
+    border-radius: 16px;
+    padding: 24px 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.transfer-feature-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.transfer-check-icon {
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.transfer-feature-text {
+    color: white;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.transfer-tagline {
+    color: white;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 0;
+    opacity: 0.9;
+}
+
+/* Right Side - Arrow Graph */
+.transfer-content-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeInRight 0.8s ease 0.6s both;
+}
+
+.transfer-graph-container {
+    width: 100%;
+    max-width: 350px;
+    height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Arrow Graph Placeholder */
+.transfer-graph-placeholder {
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px dashed rgba(255, 255, 255, 0.3);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.transfer-placeholder-text {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.transfer-placeholder-text p {
+    margin: 5px 0;
+    font-size: 1rem;
+}
+
+.transfer-placeholder-hint {
+    font-size: 0.85rem !important;
+    color: rgba(255, 255, 255, 0.4) !important;
+    font-style: italic;
+}
+
+/* When image is added, user can replace the placeholder with: */
+/* <img src="path-to-arrow-graph-image.png" alt="Arrow Graph" className="transfer-graph-image" /> */
+
+.transfer-graph-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 16px;
+}
+
+/* Responsive Design for Transfer Slide */
+@media (max-width: 1250px) {
+
+    .transfer-content-right {
+        display: none;
+    }
+}
+
+@media (max-width: 1250px) {
+    .transfer-wrapper {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .transfer-content-right {
+
+        display: none;
+    }
+
+    .transfer-graph-container {
+        max-width: 300px;
+        height: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .transfer-wrapper {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .transfer-content-left {
+        text-align: center;
+    }
+
+    .transfer-features-box {
+        padding: 20px 24px;
+    }
+
+    .transfer-feature-text {
+        font-size: 0.95rem;
+    }
+
+    .transfer-graph-container {
+        max-width: 250px;
+        height: 350px;
+    }
+}
+
+@media (max-width: 480px) {
+    .transfer-features-box {
+        padding: 16px 20px;
+        gap: 12px;
+    }
+
+    .transfer-feature-text {
+        font-size: 0.85rem;
+    }
+
+    .transfer-tagline {
+        font-size: 0.85rem;
+    }
+
+    .transfer-graph-container {
+        max-width: 200px;
+        height: 300px;
+    }
+}
+

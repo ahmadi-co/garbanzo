@@ -1,0 +1,29 @@
+.slwb-container {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom right, #1a2d66, #213a80, #162551);
+    overflow: hidden;
+    z-index: -1; /* Always behind all other content */
+    pointer-events: none; /* Prevents blocking clicks */
+    border-bottom: .5px solid hwb(0 100% 0% / 0.15);
+}
+
+.slwb-svg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Subtle grid overlay for depth */
+.slwb-grid {
+    position: absolute;
+    inset: 0;
+    opacity: 0.08;
+    background-image:
+            linear-gradient(rgba(74, 107, 189, 0.3) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(74, 107, 189, 0.3) 1px, transparent 1px);
+    background-size: 100px 100px;
+}

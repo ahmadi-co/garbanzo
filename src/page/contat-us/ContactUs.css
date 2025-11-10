@@ -1,0 +1,233 @@
+.contact-us {
+    position: relative;
+    width: 100%;
+    padding: 150px 60px;
+    overflow: hidden;
+}
+
+/* Animated background elements */
+.contact-us::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+            radial-gradient(circle at 20% 30%, rgba(100, 200, 255, 0.1) 1px, transparent 1px),
+            radial-gradient(circle at 80% 70%, rgba(100, 200, 255, 0.1) 1px, transparent 1px);
+    background-size: 200px 200px, 150px 150px;
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+.contact-us-container {
+    grid-template-columns: 1fr 1fr;
+    display: grid;
+    position: relative;
+    z-index: 2;
+    gap: 2rem;
+    margin: 0 auto;
+}
+
+.contact-us-info {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-self: center;
+}
+
+/* Header */
+.contact-us-header {
+    text-align: left;
+}
+
+.contact-us-title {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: white;
+    margin: 0 0 24px 0;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.contact-us-subtitle {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0;
+    line-height: 1.6;
+}
+
+.contact-us-email {
+    color: white;
+    margin-block: .5rem .8rem;
+}
+
+.contact-us-email-link {
+    color: white;
+    text-decoration: underline;
+}
+
+.contact-us-img {
+    justify-self: center;
+    align-self: end  ;
+    width: 70%;
+}
+
+/* Form Wrapper */
+.contact-us-form-wrapper {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    padding: 48px 40px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Form */
+.contact-us-form {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+/* Form Group */
+.contact-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.contact-form-label {
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.9);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Form Input */
+.contact-form-input,
+.contact-form-textarea {
+    width: 100%;
+    padding: 16px 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    color: white;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.contact-form-input::placeholder,
+.contact-form-textarea::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.contact-form-input:focus,
+.contact-form-textarea:focus {
+    outline: none;
+    border-color: #00ffff;
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 0 0 3px rgba(0, 255, 255, 0.1);
+}
+
+.contact-form-textarea {
+    resize: vertical;
+    min-height: 120px;
+    line-height: 1.6;
+}
+
+/* Submit Button */
+.contact-form-submit {
+    width: 100%;
+    padding: 18px 32px;
+    background: linear-gradient(135deg, #00ffff 0%, #3b82f6 100%);
+    border: none;
+    border-radius: 12px;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 8px;
+}
+
+.contact-form-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(0, 255, 255, 0.4);
+    background: linear-gradient(135deg, #00ffff 0%, #60a5fa 100%);
+}
+
+.contact-form-submit:active {
+    transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .contact-us {
+        padding: 80px 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-us-container {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .contact-us {
+        padding: 60px 20px;
+    }
+
+    .contact-us-header {
+        margin-bottom: 40px;
+    }
+
+    .contact-us-title {
+        font-size: 2.5rem;
+    }
+
+    .contact-us-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .contact-us-form-wrapper {
+        padding: 36px 28px;
+    }
+
+    .contact-us-form {
+        gap: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-us {
+        padding: 50px 15px;
+    }
+
+    .contact-us-title {
+        font-size: 2rem;
+    }
+
+    .contact-us-subtitle {
+        font-size: 1rem;
+    }
+
+    .contact-us-form-wrapper {
+        padding: 28px 20px;
+    }
+
+    .contact-form-input,
+    .contact-form-textarea {
+        padding: 14px 16px;
+        font-size: 0.95rem;
+    }
+
+    .contact-form-submit {
+        padding: 16px 24px;
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,18 @@
+
+.header-wave-svg {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(135deg, #213A80   0%, 50%, #1a2d66 100%);
+    z-index: -1;
+}
+
+.header-wave-gradient-overlay {
+
+}
+
+@media (max-width: 768px) {
+    .header-wave-container {
+        height: 100px;
+    }
+}
