@@ -16,3 +16,17 @@
     width: 100%;
     height: 100%;
 }
+
+@media (max-width: 768px) {
+    .vwb-svg {
+        filter: none !important;
+        opacity: 0.4;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .vwb-svg animate {
+        animation: none !important;
+    }
+}
+
