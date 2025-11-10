@@ -1,5 +1,6 @@
 .our-cards {
     position: relative;
+    padding-top: var(--header-height);
 }
 
 /* Animated background elements */

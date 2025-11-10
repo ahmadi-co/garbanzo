@@ -24,7 +24,7 @@ export default function VerticalWaveBlobs() {
     }, []);
 
     return (
-        <div className="vwb-wrapper">
+        <div className="vwb-container">
             <svg ref={svgRef} className="vwb-svg" xmlns="http://www.w3.org/2000/svg">
                 <defs>
                     {/* Line Gradients */}
