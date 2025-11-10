@@ -56,14 +56,6 @@ export default function VerticalWaveBlobs() {
                         <stop offset="100%" stopColor="#5c7fc7" stopOpacity="0"/>
                     </radialGradient>
 
-                    {/* Filters */}
-                    <filter id="vLineGlow">
-                        <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
-                        <feMerge>
-                            <feMergeNode in="coloredBlur"/>
-                            <feMergeNode in="SourceGraphic"/>
-                        </feMerge>
-                    </filter>
 
                     <filter id="vBlobBlur">
                         <feGaussianBlur stdDeviation="7"/>
