@@ -44,6 +44,66 @@ const WhyChooseUs = () => {
         }
     ];
 
+    useEffect(() => {
+        const ctx = gsap.context(() => {
+            // Animate section (fade and slide in)
+            gsap.fromTo(
+                sectionRef.current,
+                { opacity: 0, y: 60 },
+                {
+                    opacity: 1,
+                    y: 0,
+                    duration: 1.2,
+                    ease: 'power3.out',
+                    scrollTrigger: {
+                        trigger: sectionRef.current,
+                        start: 'top 85%',
+                        once: true, // ✅ run only once
+                    },
+                }
+            );
+
+            // Animate header (title + subtitle)
+            gsap.fromTo(
+                headerRef.current.children,
+                { opacity: 0, y: 40 },
+                {
+                    opacity: 1,
+                    y: 0,
+                    duration: 1,
+                    stagger: 0.2,
+                    ease: 'power3.out',
+                    scrollTrigger: {
+                        trigger: headerRef.current,
+                        start: 'top 85%',
+                        once: true, // ✅ run only once
+                    },
+                }
+            );
+
+            // Animate feature cards (staggered)
+            gsap.fromTo(
+                cardsRef.current,
+                { opacity: 0, y: 50, scale: 0.95 },
+                {
+                    opacity: 1,
+                    y: 0,
+                    scale: 1,
+                    duration: 0.8,
+                    stagger: 0.15,
+                    ease: 'power2.out',
+                    scrollTrigger: {
+                        trigger: sectionRef.current,
+                        start: 'top 80%',
+                        once: true, // ✅ run only once
+                    },
+                }
+            );
+        }, sectionRef);
+
+        return () => ctx.revert();
+    }, []);
+
     return (
         <section className="why-choose-us" id="why-us" ref={sectionRef}>
             <div className="why-choose-us-container container">

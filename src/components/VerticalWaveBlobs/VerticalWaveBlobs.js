@@ -56,7 +56,6 @@ export default function VerticalWaveBlobs() {
                         <stop offset="100%" stopColor="#5c7fc7" stopOpacity="0"/>
                     </radialGradient>
 
-
                     <filter id="vBlobBlur">
                         <feGaussianBlur stdDeviation="7"/>
                     </filter>
