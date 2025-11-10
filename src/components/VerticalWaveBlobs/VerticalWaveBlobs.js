@@ -1,9 +1,11 @@
 import React from 'react';
 import './VerticalWaveBlobs.css';
+import MinimalBlobBackground from "../BlobBackground/BlobBackground";
 
 export default function VerticalWaveBlobs() {
     return (
         <div className="vwb-container">
+            <MinimalBlobBackground/>
             <svg className="vwb-svg" xmlns="http://www.w3.org/2000/svg">
                 <defs>
                     {/* Line Gradients */}
@@ -160,7 +162,6 @@ export default function VerticalWaveBlobs() {
                     </path>
                 </g>
             </svg>
-
         </div>
     );
 }
