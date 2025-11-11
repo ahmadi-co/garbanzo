@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import HeroSlide from './HeroSlide';
 import './HeroSection.css';
-import HorizontalWaveBlobs from "../../components/HorizontalWaveBlobs/HorizontalWaveBlobs";
+import HorizontalWaveBlobs from "../../../components/HorizontalWaveBlobs/HorizontalWaveBlobs";
 
 const HeroSection = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
@@ -76,7 +76,9 @@ const HeroSection = () => {
             <div className="hero-section" id='home'>
                 <HorizontalWaveBlobs/>
                 {/* Shared Network Lines Background */}
-                <svg className="network-svg-bg" xmlns="http://www.w3.org/2000/svg">
+                <svg
+                    style={{position: 'absolute', width: '100%', height: '100%', opacity: 0.1, pointerEvent: 'none'}}
+                    xmlns="http://www.w3.org/2000/svg">
                     <defs>
                         <pattern id="network" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
                             <circle cx="50" cy="50" r="2" fill="#00ffff"/>

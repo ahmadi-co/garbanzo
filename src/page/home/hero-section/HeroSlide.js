@@ -1,8 +1,7 @@
 import React,{useState} from 'react';
 import './HeroSlide.css';
 import {useNavigate} from "react-router-dom";
-import HeroGoldCard from "./herocards";
-import DynamicDotsBackground from "../../components/BlobBackground/DynamicDotsBackground";
+import DynamicDotsBackground from "../../../components/BlobBackground/DynamicDotsBackground";
 
 const HeroSlide = ({slide, isActive}) => {
     const navigate = useNavigate();
@@ -18,7 +17,38 @@ const HeroSlide = ({slide, isActive}) => {
                        Our Cards
                    </h1>
 
-                   <HeroGoldCard/>
+                   <div className='hs-cards-grid'>
+                       <div className="info-card">
+                           <h1 className="hs-card-title">GOLD CARD</h1>
+                           <div className="hs-card gold-card">
+                               <div className="hs-chip">
+                                   <div className="chip-pattern"></div>
+                               </div>
+                           </div>
+                           <DynamicDotsBackground/>
+                       </div>
+
+                       <div className="info-card">
+                           <h1 className="hs-card-title">PHYSICAL CARD</h1>
+                           <div className="hs-card physical-card">
+                               <div className="hs-chip">
+                                   <div className="chip-pattern"></div>
+                               </div>
+                           </div>
+                           <DynamicDotsBackground/>
+                       </div>
+
+                       <div className="info-card">
+                           <h1 className="hs-card-title">VERTICAL CARD</h1>
+                           <div className="hs-card virtual-card">
+                               <div className="hs-chip">
+                                   <div className="chip-pattern"></div>
+                               </div>
+                           </div>
+                           <DynamicDotsBackground/>
+                       </div>
+
+                   </div>
 
                    <button
                        onClick={()=> navigate('/cards')}
@@ -73,7 +103,7 @@ const HeroSlide = ({slide, isActive}) => {
                                 <DynamicDotsBackground/>
 
                                 <img
-                                    src={require('../../assets/hero-section/hero-section-01.png')}
+                                    src={require('../../../assets/hero-section/hero-section-01.png')}
                                     alt="Arrow Graph"
                                     className="transfer-graph-image"
                                 />
@@ -102,7 +132,7 @@ const HeroSlide = ({slide, isActive}) => {
                         </div>
                         <div className='atm-machine-image'>
                             <img
-                                src={require('../../assets/hero-section/atm-machine.png')}
+                                src={require('../../../assets/hero-section/atm-machine.png')}
                                 alt="Arrow Graph"
                                 className="atm-machine-img"
                             />
@@ -149,8 +179,8 @@ const HeroSlide = ({slide, isActive}) => {
                     <div className="globe-section">
                         <div className="globe-container">
                             <img
-                                src={require('../../assets/hero-section/globe-background.png')} alt="Arrow Graph"
-                                 className="transfer-graph-image"
+                                src={require('../../../assets/hero-section/globe-background.png')} alt="Arrow Graph"
+                                className="transfer-graph-image"
                             />
 
                             {/* Banknotes */}
@@ -176,20 +206,20 @@ const HeroSlide = ({slide, isActive}) => {
                     <div className="crypto-section">
                         {slide.rightIcons.includes('ethereum') && (
                             <div className="crypto-logo ethereum">
-                                <img src={require('../../assets/hero-section/tether.png')} alt="Arrow Graph"
+                                <img src={require('../../../assets/hero-section/tether.png')} alt="Arrow Graph"
                                      className="transfer-graph-image"/>
                             </div>
                         )}
                         {slide.rightIcons.includes('tether') && (
                             <div className="crypto-logo tether">
-                                <img src={require('../../assets/hero-section/ethereum.png')} alt="Arrow Graph"
+                                <img src={require('../../../assets/hero-section/ethereum.png')} alt="Arrow Graph"
                                      className="transfer-graph-image"/>
                             </div>
                         )}
 
                         {slide.rightIcons.includes('tether') && (
                             <div className="crypto-logo usd">
-                                <img src={require('../../assets/hero-section/usd.png')} alt="Arrow Graph"
+                                <img src={require('../../../assets/hero-section/usd.png')} alt="Arrow Graph"
                                      className="transfer-graph-image"/>
                             </div>
                         )}
@@ -202,21 +232,21 @@ const HeroSlide = ({slide, isActive}) => {
                 <div className="payment-networks">
                     <div className="payment-logo sepa">
                         <div className="sepa-logo">
-                            <img src={require('../../assets/hero-section/sepa-instant.png')} alt="Arrow Graph"/>
+                            <img src={require('../../../assets/hero-section/sepa-instant.png')} alt="Arrow Graph"/>
                         </div>
                     </div>
 
                     <div className="payment-logo faster-payments">
-                        <img src={require('../../assets/hero-section/fast-payment-logo.png')} alt="Arrow Graph"/>
+                        <img src={require('../../../assets/hero-section/fast-payment-logo.png')} alt="Arrow Graph"/>
                     </div>
 
                     <div className="payment-logo fedwire">
-                        <img src={require('../../assets/hero-section/fedwire-to-deliver-icon.png')} alt="Arrow Graph"
+                        <img src={require('../../../assets/hero-section/fedwire-to-deliver-icon.png')} alt="Arrow Graph"
                              className="transfer-graph-image"/>
                     </div>
 
                     <div className="payment-logo swift">
-                        <img src={require('../../assets/hero-section/swift-icon.png')} alt="Arrow Graph"
+                        <img src={require('../../../assets/hero-section/swift-icon.png')} alt="Arrow Graph"
                              className="transfer-graph-image"/>
                     </div>
                 </div>

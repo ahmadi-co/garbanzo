@@ -4,6 +4,8 @@ import PhysicalCard from "./PhysicaCard/PhysicalCard";
 import GoldCard from "./GoldCard/GoldCard";
 import VirtualCard from "./VirtualCard/VirtualCard";
 import VerticalWaveBlobs from "../../components/VerticalWaveBlobs/VerticalWaveBlobs";
+import HeroSection from "../../components/HeroSection/HeroSection";
+import {useNavigate} from "react-router-dom";
 
 
 const OurCards = () => {
@@ -55,14 +57,26 @@ const OurCards = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+    const navigate = useNavigate()
+
     return (
         <main className='main'>
             <VerticalWaveBlobs/>
+            <HeroSection
+                title="<span style='color:#00ffff'>Our Cards — </span>Choose the Perfect Fit for Your Lifestyle"
+                subtitle="
+                Experience premium banking freedom with our range of cards designed for every need — from luxury payments to digital convenience.
+                "
+                primaryButtonText="Contact Us"
+                secondaryButtonText='About Us'
+                onPrimaryButtonClick={() => navigate('/contact-us')}
+                onSecondaryButtonClick={() => navigate('/about-us')}
+            />
             <section className="our-cards section" id='cards'>
                 <div className="our-cards-container container">
                     {/* Header */}
                     <div className="our-cards-header">
-                        <h2 className="our-cards-title">Our Cards</h2>
+                        <h2 className="our-cards-title">Explore Our Card Range</h2>
                     </div>
 
                     {/* Cards Grid */}

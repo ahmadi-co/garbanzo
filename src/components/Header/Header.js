@@ -63,14 +63,14 @@ export default function Header() {
                         <HashLink to='/#why-us' className="nav-link" >
                             Why Us
                         </HashLink>
-                        <Link to='/cards' className="nav-link">
+                        <Link to='/our-cards' className="nav-link">
                             Cards
                         </Link>
 
-                        <HashLink to='/#about' className="nav-link" >
+                        <HashLink to='/about-us' className="nav-link" >
                             About Us
                         </HashLink>
-                        <Link to='/contact' className="nav-link" >
+                        <Link to='/contact-us' className="nav-link" >
                             Contact Us
                         </Link>
                     </nav>
