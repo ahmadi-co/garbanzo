@@ -3,6 +3,8 @@ import './footer.css';
 import { FaTwitter, FaFacebook, FaLinkedin, FaInstagram, FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
 import logo from '../../assets/header/logo.svg'
 import RowDotBackground from "../BlobBackground/RowDotBackground";
+import {Link} from "react-router-dom";
+import {HashLink} from "react-router-hash-link";
 
 export default function Footer() {
     const scrollToSection = (sectionId) => {
@@ -15,6 +17,13 @@ export default function Footer() {
     const handleMail = () => {
         window.location.href = 'mailto:info@cryptomaster.exchange';
     }
+
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+        });
+    };
 
     return (
         <>
@@ -53,11 +62,41 @@ export default function Footer() {
                             <div className="footer-section">
                                 <h3 className="footer-title">Quick Links</h3>
                                 <div className="footer-links">
-                                    <a className="footer-link" onClick={() => scrollToSection('home')}>Home</a>
-                                    <a className="footer-link" onClick={() => scrollToSection('why-us')}>Why Us</a>
-                                    <a className="footer-link" onClick={() => scrollToSection('cards')}>Cards</a>
-                                    <a className="footer-link" onClick={() => scrollToSection('about')}>About Us</a>
-                                    <a className="footer-link" onClick={() => scrollToSection('contact')}>Contact Us</a>
+                                    <Link to='/#home' className="footer-link" onClick={scrollToTop} >
+                                        Home
+                                    </Link>
+                                    <HashLink
+                                        to='/#services'
+                                        className="footer-link"
+
+                                    >
+                                        Our Services
+                                    </HashLink>
+                                    <HashLink
+                                        to='/#why-us'
+                                        className="footer-link"
+                                    >
+                                        Why Us
+                                    </HashLink>
+                                    <Link
+                                        to='/our-cards'
+                                        className="footer-link"
+                                    >
+                                        Cards
+                                    </Link>
+
+                                    <HashLink
+                                        to='/about-us'
+                                        className="footer-link"
+                                    >
+                                        About Us
+                                    </HashLink>
+                                    <Link
+                                        to='/contact-us'
+                                        className="footer-link"
+                                    >
+                                        Contact Us
+                                    </Link>
                                 </div>
                             </div>
 

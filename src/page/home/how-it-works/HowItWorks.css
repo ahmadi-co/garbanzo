@@ -51,7 +51,7 @@
 
 .step-icon {
     font-size: var(--h1-font-size);
-    color: var(--light-cyan);
+    color: rgba(255, 255, 255, 0.8);
 }
 
 .step-content {
@@ -62,8 +62,7 @@
     font-size: 1.5rem;
     font-weight: 600;
     margin-bottom: 0.75rem;
-    color: white;
-
+    color: var(--light-cyan);
 }
 
 .step-description {

@@ -81,12 +81,13 @@
     cursor: pointer;
     display: inline-block;
     position: relative;
+    width: max-content;
     padding-left: 0;
 }
 
 .footer-link:hover {
     color: #22d3ee;
-    padding-left: 0.5rem;
+    padding-left: 1.2rem;
 }
 
 .footer-link::before {
