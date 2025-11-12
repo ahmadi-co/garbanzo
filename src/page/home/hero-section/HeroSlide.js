@@ -176,21 +176,19 @@ const HeroSlide = ({slide, isActive}) => {
             {/* Main Content */}
             <div className="banner-content container">
                 {/* Left Side - Globe Illustration */}
-                {slide.leftIcon === 'globe' && (
-                    <div className="globe-section">
-                        <div className="globe-container">
-                            <img
-                                src={require('../../../assets/hero-section/globe-background.png')} alt="Arrow Graph"
-                                className="transfer-graph-image"
-                            />
+                <div className="globe-section">
+                    <div className="globe-container">
+                        <img
+                            src={require('../../../assets/hero-section/globe-background.png')} alt="Arrow Graph"
+                            className="transfer-graph-image"
+                        />
 
-                            {/* Banknotes */}
-                            <div className="banknote banknote-1">$</div>
-                            <div className="banknote banknote-2">$</div>
-                            <div className="banknote banknote-3">$</div>
-                        </div>
+                        {/* Banknotes */}
+                        <div className="banknote banknote-1">$</div>
+                        <div className="banknote banknote-2">$</div>
+                        <div className="banknote banknote-3">$</div>
                     </div>
-                )}
+                </div>
 
                 {/* Center - Headlines */}
                 <div className="headlines-section">
@@ -203,55 +201,44 @@ const HeroSlide = ({slide, isActive}) => {
                 </div>
 
                 {/* Right Side - Crypto Logos */}
-                {slide.rightIcons && slide.rightIcons.length > 0 && (
-                    <div className="crypto-section">
-                        {slide.rightIcons.includes('ethereum') && (
-                            <div className="crypto-logo ethereum">
-                                <img src={require('../../../assets/hero-section/tether.png')} alt="Arrow Graph"
-                                     className="transfer-graph-image"/>
-                            </div>
-                        )}
-                        {slide.rightIcons.includes('tether') && (
-                            <div className="crypto-logo tether">
-                                <img src={require('../../../assets/hero-section/ethereum.png')} alt="Arrow Graph"
-                                     className="transfer-graph-image"/>
-                            </div>
-                        )}
-
-                        {slide.rightIcons.includes('tether') && (
-                            <div className="crypto-logo usd">
-                                <img src={require('../../../assets/hero-section/usd.png')} alt="Arrow Graph"
-                                     className="transfer-graph-image"/>
-                            </div>
-                        )}
-                    </div>
-                )}
-            </div>
-
-            {/* Bottom - Payment Network Logos */}
-            {slide.paymentNetworks && (
-                <div className="payment-networks">
-                    <div className="payment-logo sepa">
-                        <div className="sepa-logo">
-                            <img src={require('../../../assets/hero-section/sepa-instant.png')} alt="Arrow Graph"/>
-                        </div>
-                    </div>
-
-                    <div className="payment-logo faster-payments">
-                        <img src={require('../../../assets/hero-section/fast-payment-logo.png')} alt="Arrow Graph"/>
-                    </div>
-
-                    <div className="payment-logo fedwire">
-                        <img src={require('../../../assets/hero-section/fedwire-to-deliver-icon.png')} alt="Arrow Graph"
+                <div className="crypto-section">
+                    <div className="crypto-logo ethereum">
+                        <img src={require('../../../assets/hero-section/tether.png')} alt="Arrow Graph"
                              className="transfer-graph-image"/>
                     </div>
-
-                    <div className="payment-logo swift">
-                        <img src={require('../../../assets/hero-section/swift-icon.png')} alt="Arrow Graph"
+                    <div className="crypto-logo tether">
+                        <img src={require('../../../assets/hero-section/ethereum.png')} alt="Arrow Graph"
+                             className="transfer-graph-image"/>
+                    </div>
+                    <div className="crypto-logo usd">
+                        <img src={require('../../../assets/hero-section/usd.png')} alt="Arrow Graph"
                              className="transfer-graph-image"/>
                     </div>
                 </div>
-            )}
+            </div>
+
+            {/* Bottom - Payment Network Logos */}
+            <div className="payment-networks">
+                <div className="payment-logo sepa">
+                    <div className="sepa-logo">
+                        <img src={require('../../../assets/hero-section/sepa-instant.png')} alt="Arrow Graph"/>
+                    </div>
+                </div>
+
+                <div className="payment-logo faster-payments">
+                    <img src={require('../../../assets/hero-section/fast-payment-logo.png')} alt="Arrow Graph"/>
+                </div>
+
+                <div className="payment-logo fedwire">
+                    <img src={require('../../../assets/hero-section/fedwire-to-deliver-icon.png')} alt="Arrow Graph"
+                         className="transfer-graph-image"/>
+                </div>
+
+                <div className="payment-logo swift">
+                    <img src={require('../../../assets/hero-section/swift-icon.png')} alt="Arrow Graph"
+                         className="transfer-graph-image"/>
+                </div>
+            </div>
         </div>
     );
 };
