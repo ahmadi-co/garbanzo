@@ -53,7 +53,7 @@ const HeroSlide = ({slide, isActive}) => {
                     </div>
 
                     <button
-                        onClick={()=> navigate('/cards')}
+                        onClick={()=> navigate('/our-cards')}
                         className={`crypto-button ${isHovered ? 'hover' : ''} ${isButtonActive ? 'active' : ''}`}
                         onMouseEnter={() => setIsHovered(true)}
                         onMouseLeave={() => setIsHovered(false)}
@@ -61,7 +61,7 @@ const HeroSlide = ({slide, isActive}) => {
                         onMouseUp={() => setIsActive(false)}
                     >
                         <div className={`shine ${isHovered ? 'active' : ''}`}></div>
-                        Learn More
+                            Learn More
                         <span className="icon">➔</span>
                     </button>
                 </div>
