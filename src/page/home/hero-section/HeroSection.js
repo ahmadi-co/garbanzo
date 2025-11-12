@@ -66,7 +66,7 @@ const HeroSection = () => {
             </svg>
 
             <div className="slider-container">
-                <div className="slider-wrapper" ref={sliderWrapperRef}>
+                <div className="slider-wrapper" >
                     {slides.map((slide, index) => (
                         <HeroSlide key={slide.id} slide={slide} isActive={index === currentSlide} />
                     ))}
