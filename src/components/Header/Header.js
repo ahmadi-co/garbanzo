@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import './Header.css'
 import { FaBars, FaTimes } from "react-icons/fa";
-import logo from "../../assets/header/logo.png";
+import logo from "../../assets/header/logo.svg";
 import {Link} from "react-router-dom";
 import {HashLink} from "react-router-hash-link";
 

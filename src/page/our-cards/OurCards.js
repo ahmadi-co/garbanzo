@@ -163,7 +163,10 @@ const OurCards = () => {
                                     }
 
                                     {/* CTA Button */}
-                                    <button className={`our-card-cta-button cta-${card.cardColor}`}>
+                                    <button
+                                        className={`our-card-cta-button cta-${card.cardColor}`}
+                                        onClick={() => navigate('/contact-us')}
+                                    >
                                         Get Started
                                     </button>
                                 </div>
