@@ -11,7 +11,6 @@
 }
 
 .header-container {
-    margin: 0 auto;
     padding: 1rem 1.5rem;
     display: flex;
     justify-content: space-between;
@@ -92,6 +91,10 @@
 
 /* Responsive (Mobile) */
 @media (max-width: 768px) {
+    .header-container {
+        padding-block: 1rem !important;
+    }
+
     .mobile-menu-button {
         display: block;
     }

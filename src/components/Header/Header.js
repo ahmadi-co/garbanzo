@@ -21,6 +21,7 @@ export default function Header() {
             top: 0,
             behavior: "smooth",
         });
+        setMobileMenuOpen(false)
     };
 
     return (
@@ -60,20 +61,41 @@ export default function Header() {
                         <Link to='/#home' className="nav-link" onClick={scrollToTop} >
                             Home
                         </Link>
-                        <HashLink to='/#services' className="nav-link" >
+                        <HashLink
+                            to='/#services'
+                            className="nav-link"
+                            onClick={() => setMobileMenuOpen(false)}
+
+                        >
                             Our Services
                         </HashLink>
-                        <HashLink to='/#why-us' className="nav-link" >
+                        <HashLink
+                            to='/#why-us'
+                            className="nav-link"
+                            onClick={() => setMobileMenuOpen(false)}
+                        >
                             Why Us
                         </HashLink>
-                        <Link to='/our-cards' className="nav-link">
+                        <Link
+                            to='/our-cards'
+                            className="nav-link"
+                            onClick={() => setMobileMenuOpen(false)}
+                        >
                             Cards
                         </Link>
 
-                        <HashLink to='/about-us' className="nav-link" >
+                        <HashLink
+                            to='/about-us'
+                            className="nav-link"
+                            onClick={() => setMobileMenuOpen(false)}
+                        >
                             About Us
                         </HashLink>
-                        <Link to='/contact-us' className="nav-link" >
+                        <Link
+                            to='/contact-us'
+                            className="nav-link"
+                            onClick={() => setMobileMenuOpen(false)}
+                        >
                             Contact Us
                         </Link>
                     </nav>

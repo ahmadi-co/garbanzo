@@ -3,7 +3,8 @@
     height: 95vh;
     width: 100%;
     overflow: hidden;
-    border-bottom: 1px solid hwb(0 100% 0% / 0.15);;
+    padding-block: 4rem 6rem;
+    border-bottom: 1px solid hwb(0 100% 0% / 0.15);
 }
 
 /* Overlay */
@@ -123,17 +124,20 @@
 
 /* Responsive */
 @media (max-width: 768px) {
+    .hero-container {
+        padding-block: 7rem 3.5rem;
+    }
+
     .hero-title {
         font-size: 2.5rem;
+        margin-bottom: .1rem;
     }
 
     .hero-subtitle {
         font-size: 1.25rem;
+        margin-bottom: .1rem;
     }
 }
-
-
-
 
 .btn-primary {
     display: flex;
