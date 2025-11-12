@@ -122,7 +122,7 @@ export default function HeroSection({
 
                 <div className="hero-buttons" ref={buttonsRef}>
                     {primaryButtonText && (
-                        <button className="btn btn-primary" onClick={onPrimaryButtonClick}>
+                        <button className="hero-btn btn-primary" onClick={onPrimaryButtonClick}>
                             <span className="text">{primaryButtonText}</span>
                             <span className="svg">
                                 <svg
@@ -141,7 +141,7 @@ export default function HeroSection({
                         </button>
                     )}
                     {secondaryButtonText && (
-                        <button className="btn btn-secondary" onClick={onSecondaryButtonClick}>
+                        <button className="hero-btn btn-secondary" onClick={onSecondaryButtonClick}>
                             {secondaryButtonText}
                         </button>
                     )}
