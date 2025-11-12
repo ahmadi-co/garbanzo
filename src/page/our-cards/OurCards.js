@@ -6,9 +6,13 @@ import VirtualCard from "./VirtualCard/VirtualCard";
 import VerticalWaveBlobs from "../../components/VerticalWaveBlobs/VerticalWaveBlobs";
 import HeroSection from "../../components/HeroSection/HeroSection";
 import {useNavigate} from "react-router-dom";
+import { gsap } from 'gsap';
 
 
 const OurCards = () => {
+    const cardsRef = useRef([]);
+    const navigate = useNavigate()
+
     const cards = [
         {
             id: "gold",
@@ -49,15 +53,41 @@ const OurCards = () => {
         }
     ];
 
-    const [scrollY, setScrollY] = useState(0);
-
+    // Animate cards on scroll
     useEffect(() => {
-        const handleScroll = () => setScrollY(window.scrollY);
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
+        cardsRef.current.forEach((card, i) => {
+            if (card) {
+                gsap.fromTo(
+                    card,
+                    { opacity: 0, y: 80 },
+                    {
+                        opacity: 1,
+                        y: 0,
+                        duration: 1,
+                        delay: i * 0.2,
+                        ease: "power3.out",
+                        scrollTrigger: {
+                            trigger: card,
+                            start: "top 85%",
+                        },
+                    }
+                );
+            }
+        });
     }, []);
 
-    const navigate = useNavigate()
+    // Add button hover scaling
+    useEffect(() => {
+        const buttons = document.querySelectorAll(".our-card-cta-button");
+        buttons.forEach((btn) => {
+            btn.addEventListener("mouseenter", () => {
+                gsap.to(btn, { scale: 1.05, duration: 0.3, ease: "power1.out" });
+            });
+            btn.addEventListener("mouseleave", () => {
+                gsap.to(btn, { scale: 1, duration: 0.3, ease: "power1.out" });
+            });
+        });
+    }, []);
 
     return (
         <main className='main'>
@@ -82,7 +112,11 @@ const OurCards = () => {
                     {/* Cards Grid */}
                     <div className="our-cards-grid">
                         {cards.map((card, index) => (
-                            <div key={card.id} className="our-card-wrapper">
+                            <div
+                                key={card.id}
+                                className="our-card-wrapper"
+                                ref={(el) => (cardsRef.current[index] = el)}
+                            >
                                 <div className={`our-card our-card-${card.cardColor}`}>
                                     {/* Title */}
                                     <h3 className="our-card-title">{card.title}</h3>

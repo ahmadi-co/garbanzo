@@ -30,7 +30,13 @@
 
 .slider-wrapper {
     display: flex;
+    width: 100%; /* GSAP moves it by x % */
     transition: transform 0.6s ease-in-out;
+}
+
+.slide-item {
+    min-width: 100%; /* Each slide takes full container width */
+    flex-shrink: 0;  /* Prevent shrinking */
 }
 
 /* Navigation Arrows */

@@ -145,7 +145,7 @@
 
 .our-card-feature-bullet {
     margin-right: 12px;
-    color: #00ffff;
+    color: var(--light-cyan);
     font-size: 1.25rem;
     line-height: 1;
     flex-shrink: 0;
@@ -220,7 +220,7 @@
 
 .card-container {
     transform: rotate(-12deg);
-    margin-bottom: 35px;
+    padding-block: 35px;
     transition: all .3s ease;
 }
 

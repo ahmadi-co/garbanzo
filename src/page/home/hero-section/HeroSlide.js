@@ -1,6 +1,8 @@
-import React,{useState} from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './HeroSlide.css';
 import {useNavigate} from "react-router-dom";
+import { gsap } from "gsap";
+
 import DynamicDotsBackground from "../../../components/BlobBackground/DynamicDotsBackground";
 
 const HeroSlide = ({slide, isActive}) => {
@@ -8,61 +10,76 @@ const HeroSlide = ({slide, isActive}) => {
     const [isHovered, setIsHovered] = useState(false);
     const [isButtonActive, setIsActive] = useState(false);
 
+    // Ref for the slide container
+    const slideRef = useRef(null);
+
+    useEffect(() => {
+        if (isActive) {
+            gsap.fromTo(
+                slideRef.current,
+                { autoAlpha: 0, y: 50 },
+                { autoAlpha: 1, y: 0, duration: 1, ease: "power3.out" }
+            );
+        } else {
+            gsap.to(slideRef.current, { autoAlpha: 0, y: -50, duration: 0.5, ease: "power3.in" });
+        }
+    }, [isActive]);
+
     // Card-based slide layout
     if (slide.type === 'cards') {
         return (
-            <div className="hero-slide hero-slide-cards">
-               <div className='hero-slide-cards-container container '>
-                   <h1 className="hero-slide-title">
-                       Our Cards
-                   </h1>
+            <div ref={slideRef} className="hero-slide hero-slide-cards">
+                <div className='hero-slide-cards-container container '>
+                    <h1 className="hero-slide-title">
+                        Our Cards
+                    </h1>
 
-                   <div className='hs-cards-grid'>
-                       <div className="info-card">
-                           <h1 className="hs-card-title">GOLD CARD</h1>
-                           <div className="hs-card gold-card">
-                               <div className="hs-chip">
-                                   <div className="chip-pattern"></div>
-                               </div>
-                           </div>
-                           <DynamicDotsBackground/>
-                       </div>
+                    <div className='hs-cards-grid'>
+                        <div className="info-card">
+                            <h1 className="hs-card-title">GOLD CARD</h1>
+                            <div className="hs-card gold-card">
+                                <div className="hs-chip">
+                                    <div className="chip-pattern"></div>
+                                </div>
+                            </div>
+                            <DynamicDotsBackground/>
+                        </div>
 
-                       <div className="info-card">
-                           <h1 className="hs-card-title">PHYSICAL CARD</h1>
-                           <div className="hs-card physical-card">
-                               <div className="hs-chip">
-                                   <div className="chip-pattern"></div>
-                               </div>
-                           </div>
-                           <DynamicDotsBackground/>
-                       </div>
+                        <div className="info-card">
+                            <h1 className="hs-card-title">PHYSICAL CARD</h1>
+                            <div className="hs-card physical-card">
+                                <div className="hs-chip">
+                                    <div className="chip-pattern"></div>
+                                </div>
+                            </div>
+                            <DynamicDotsBackground/>
+                        </div>
 
-                       <div className="info-card">
-                           <h1 className="hs-card-title">VERTICAL CARD</h1>
-                           <div className="hs-card virtual-card">
-                               <div className="hs-chip">
-                                   <div className="chip-pattern"></div>
-                               </div>
-                           </div>
-                           <DynamicDotsBackground/>
-                       </div>
+                        <div className="info-card">
+                            <h1 className="hs-card-title">VERTICAL CARD</h1>
+                            <div className="hs-card virtual-card">
+                                <div className="hs-chip">
+                                    <div className="chip-pattern"></div>
+                                </div>
+                            </div>
+                            <DynamicDotsBackground/>
+                        </div>
 
-                   </div>
+                    </div>
 
-                   <button
-                       onClick={()=> navigate('/cards')}
-                       className={`crypto-button ${isHovered ? 'hover' : ''} ${isButtonActive ? 'active' : ''}`}
-                       onMouseEnter={() => setIsHovered(true)}
-                       onMouseLeave={() => setIsHovered(false)}
-                       onMouseDown={() => setIsActive(true)}
-                       onMouseUp={() => setIsActive(false)}
-                   >
-                       <div className={`shine ${isHovered ? 'active' : ''}`}></div>
-                           Learn More
-                       <span className="icon">➔</span>
-                   </button>
-               </div>
+                    <button
+                        onClick={()=> navigate('/cards')}
+                        className={`crypto-button ${isHovered ? 'hover' : ''} ${isButtonActive ? 'active' : ''}`}
+                        onMouseEnter={() => setIsHovered(true)}
+                        onMouseLeave={() => setIsHovered(false)}
+                        onMouseDown={() => setIsActive(true)}
+                        onMouseUp={() => setIsActive(false)}
+                    >
+                        <div className={`shine ${isHovered ? 'active' : ''}`}></div>
+                        Learn More
+                        <span className="icon">➔</span>
+                    </button>
+                </div>
             </div>
         );
     }
@@ -70,21 +87,26 @@ const HeroSlide = ({slide, isActive}) => {
     // Money Transfer features slide layout
     if (slide.type === 'transfer') {
         return (
-            <div className={`hero-slide hero-slide-transfer  ${isActive ? 'active' : ''}`}>
+            <div ref={slideRef} className={`hero-slide hero-slide-transfer  ${isActive ? 'active' : ''}`}>
                 <div className='container'>
                     <div className="transfer-wrapper">
                         {/* Left Side - Brand and Main Slogan */}
                         <div className="transfer-content-left">
                             <h1 className="transfer-main-headline">
-                                {slide.mainHeadline}
-                                <span className="transfer-highlight">{slide.highlightWord}</span>
+                                Safe Money Transfer With Low
+                                <span className="transfer-highlight">Commission</span>
                             </h1>
                         </div>
 
                         {/* Middle-Right - Features Box */}
                         <div className="transfer-content-middle">
                             <div className="transfer-features-box">
-                                {slide.features && slide.features.map((feature, index) => (
+                                {[
+                                    "Send Money to Your Country Easily",
+                                    "Hassle-free Low Commission Money Transfer To Your Country",
+                                    "Send Money Anywhere in the World"
+
+                                ].map((feature, index) => (
                                     <div key={index} className="transfer-feature-item">
                                         <svg className="transfer-check-icon" width="20" height="20" viewBox="0 0 24 24"
                                              fill="white">
@@ -94,7 +116,7 @@ const HeroSlide = ({slide, isActive}) => {
                                     </div>
                                 ))}
                             </div>
-                            <p className="transfer-tagline">{slide.tagline}</p>
+                            <p className="transfer-tagline">We provide the privilege of sending money with Crypto Master in the easiest way.</p>
                         </div>
 
                         {/* Right Side - Arrow Graph Placeholder */}
@@ -118,16 +140,16 @@ const HeroSlide = ({slide, isActive}) => {
     // ATM-based slide layout
     if (slide.type === 'atm') {
         return (
-            <div className={`hero-slide hero-slide-atm  ${isActive ? 'active' : ''}`}>
+            <div ref={slideRef} className={`hero-slide hero-slide-atm  ${isActive ? 'active' : ''}`}>
                 <div className='container'>
                     <div className="atm-wrapper">
                         {/* Left Side - Headlines */}
                         <div className="atm-content-left">
                             <h1 className="atm-main-headline">
-                                {slide.mainHeadline}
+                                WITHDRAW WITH CRYPTO CARD
                             </h1>
                             <h2 className="atm-sub-headline">
-                                {slide.subHeadline}
+                                PAY EASILY!
                             </h2>
                         </div>
                         <div className='atm-machine-image'>
@@ -143,25 +165,19 @@ const HeroSlide = ({slide, isActive}) => {
                             {/* Right Side - ATM and Info Boxes */}
                             <div className="atm-content-right">
                                 {/* Top Info Box */}
-                                {slide.infoBox1 && (
-                                    <div className="atm-info-box atm-info-box-top">
-                                        {slide.infoBox1.icon === 'play' && (
-                                            <svg className="atm-play-icon" width="20" height="20" viewBox="0 0 24 24"
-                                                 fill="#213A80">
-                                                <path d="M8 5v14l11-7z"/>
-                                            </svg>
-                                        )}
-                                        <p className="atm-info-text">{slide.infoBox1.text}</p>
-                                    </div>
-                                )}
+                                <div className="atm-info-box atm-info-box-top">
+                                    <svg className="atm-play-icon" width="20" height="20" viewBox="0 0 24 24"
+                                         fill="#213A80">
+                                        <path d="M8 5v14l11-7z"/>
+                                    </svg>
+                                    <p className="atm-info-text">Withdraw money from ATM with your Crypto Card and pay EASILY.</p>
+                                </div>
 
                                 {/* Bottom Info Box */}
-                                {slide.infoBox2 && (
-                                    <div className="atm-info-box atm-info-box-bottom">
-                                        <p className="atm-info-title">{slide.infoBox2.title}</p>
-                                        <p className="atm-info-text">{slide.infoBox2.text}</p>
-                                    </div>
-                                )}
+                                <div className="atm-info-box atm-info-box-bottom">
+                                    <p className="atm-info-title">Need assistance?</p>
+                                    <p className="atm-info-text">CryptoMaster at Your Service.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -171,7 +187,7 @@ const HeroSlide = ({slide, isActive}) => {
     }
 
     return (
-        <div className={` hero-slide  ${isActive ? 'active' : ''}`}>
+        <div ref={slideRef} className={` hero-slide  ${isActive ? 'active' : ''}`}>
             {/* Main Content */}
             <div className="banner-content container">
                 {/* Left Side - Globe Illustration */}
@@ -194,10 +210,10 @@ const HeroSlide = ({slide, isActive}) => {
                 {/* Center - Headlines */}
                 <div className="headlines-section">
                     <h1 className="main-headline">
-                        {slide.mainHeadline}
+                        TRANSFER MONEY INTERNATIONALLY SECURELY
                     </h1>
                     <h2 className="banner-sub-headline">
-                        {slide.subHeadline}
+                        WITH YOUR CRYPTOMASTER ACCOUNT!
                     </h2>
                 </div>
 

@@ -569,6 +569,11 @@
     .hs-cards-grid {
         column-gap: 1rem;
         row-gap: 6rem;
+        margin-bottom: 3rem;
+    }
+
+    .hero-slide-title {
+        margin-bottom: 1rem;
     }
 
     .info-card {

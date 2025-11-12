@@ -60,6 +60,9 @@ export default function Header() {
                         <Link to='/#home' className="nav-link" onClick={scrollToTop} >
                             Home
                         </Link>
+                        <HashLink to='/#services' className="nav-link" >
+                            Our Services
+                        </HashLink>
                         <HashLink to='/#why-us' className="nav-link" >
                             Why Us
                         </HashLink>

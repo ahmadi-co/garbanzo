@@ -1,11 +1,10 @@
 .hero-container {
     position: relative;
-    height: 100vh;
+    height: 95vh;
     width: 100%;
     overflow: hidden;
-    font-family: 'Inter', sans-serif;
+    border-bottom: 1px solid hwb(0 100% 0% / 0.15);;
 }
-
 
 /* Overlay */
 .hero-overlay {

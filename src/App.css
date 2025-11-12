@@ -17,6 +17,10 @@
     --first-color-dark: #14234D;
     --first-color-darker: #122046;
 
+    --light-cyan: #00ffff;
+
+    --border-light-white: hwb(0 100% 0% / 0.15);
+
     /* ---- Font and typography ---- */
     /*.5rem = 8px | 1rem = 16px ...*/
     --body-font: "Roboto";
