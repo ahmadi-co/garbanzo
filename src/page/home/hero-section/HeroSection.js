@@ -38,7 +38,7 @@ const HeroSection = () => {
 
         const interval = setInterval(() => {
             setCurrentSlide((prev) => (prev + 1) % totalSlides);
-        }, 5000); // 5 seconds per slide
+        }, 6000); // 5 seconds per slide
 
         return () => clearInterval(interval);
     }, [totalSlides]);
@@ -66,7 +66,7 @@ const HeroSection = () => {
             </svg>
 
             <div className="slider-container">
-                <div className="slider-wrapper" >
+                <div className="slider-wrapper" ref={sliderWrapperRef}>
                     {slides.map((slide, index) => (
                         <HeroSlide key={slide.id} slide={slide} isActive={index === currentSlide} />
                     ))}

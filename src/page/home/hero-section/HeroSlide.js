@@ -10,25 +10,10 @@ const HeroSlide = ({slide, isActive}) => {
     const [isHovered, setIsHovered] = useState(false);
     const [isButtonActive, setIsActive] = useState(false);
 
-    // Ref for the slide container
-    const slideRef = useRef(null);
-
-    useEffect(() => {
-        if (isActive) {
-            gsap.fromTo(
-                slideRef.current,
-                { autoAlpha: 0, y: 50 },
-                { autoAlpha: 1, y: 0, duration: 1, ease: "power3.out" }
-            );
-        } else {
-            gsap.to(slideRef.current, { autoAlpha: 0, y: -50, duration: 0.5, ease: "power3.in" });
-        }
-    }, [isActive]);
-
     // Card-based slide layout
     if (slide.type === 'cards') {
         return (
-            <div ref={slideRef} className="hero-slide hero-slide-cards">
+            <div className="hero-slide hero-slide-cards">
                 <div className='hero-slide-cards-container container '>
                     <h1 className="hero-slide-title">
                         Our Cards
@@ -87,7 +72,7 @@ const HeroSlide = ({slide, isActive}) => {
     // Money Transfer features slide layout
     if (slide.type === 'transfer') {
         return (
-            <div ref={slideRef} className={`hero-slide hero-slide-transfer  ${isActive ? 'active' : ''}`}>
+            <div className={`hero-slide hero-slide-transfer  ${isActive ? 'active' : ''}`}>
                 <div className='container'>
                     <div className="transfer-wrapper">
                         {/* Left Side - Brand and Main Slogan */}
@@ -140,7 +125,7 @@ const HeroSlide = ({slide, isActive}) => {
     // ATM-based slide layout
     if (slide.type === 'atm') {
         return (
-            <div ref={slideRef} className={`hero-slide hero-slide-atm  ${isActive ? 'active' : ''}`}>
+            <div className={`hero-slide hero-slide-atm  ${isActive ? 'active' : ''}`}>
                 <div className='container'>
                     <div className="atm-wrapper">
                         {/* Left Side - Headlines */}
@@ -187,7 +172,7 @@ const HeroSlide = ({slide, isActive}) => {
     }
 
     return (
-        <div ref={slideRef} className={` hero-slide  ${isActive ? 'active' : ''}`}>
+        <div  className={` hero-slide  ${isActive ? 'active' : ''}`}>
             {/* Main Content */}
             <div className="banner-content container">
                 {/* Left Side - Globe Illustration */}

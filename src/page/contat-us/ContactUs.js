@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+import { gsap } from 'gsap';
 import './ContactUs.css';
 import VerticalWaveBlobs from "../../components/VerticalWaveBlobs/VerticalWaveBlobs";
 import DynamicDotsBackground from "../../components/BlobBackground/DynamicDotsBackground";
@@ -34,6 +35,36 @@ const ContactUs = () => {
         });
     };
 
+    // GSAP Refs
+    const containerRef = useRef(null);
+    const headerRef = useRef(null);
+    const formRef = useRef(null);
+    const imageRef = useRef(null);
+    const buttonRef = useRef(null);
+
+    useEffect(() => {
+        const ctx = gsap.context(() => {
+            const tl = gsap.timeline({ defaults: { ease: "power2.out", duration: 1 } });
+
+            // Header
+            tl.from(headerRef.current, { autoAlpha: 0, y: -40 });
+
+            // Image
+            tl.from(imageRef.current, { autoAlpha: 0, scale: 0.95, duration: 1 }, "-=0.4");
+
+            // Form fields
+            const formGroups = formRef.current.querySelectorAll('.contact-form-group');
+            tl.from(formGroups, { autoAlpha: 0, y: 30, stagger: 0.15 }, "-=0.3");
+
+            // Submit Button (with autoAlpha ensures it becomes visible)
+            if (buttonRef.current) {
+                tl.from(buttonRef.current, { autoAlpha: 0, y: 20, scale: 0.98, duration: 0.6 }, "+=0.2");
+            }
+        }, containerRef);
+
+        return () => ctx.revert();
+    }, []);
+
     return (
         <main className='main'>
             <VerticalWaveBlobs/>
@@ -42,7 +73,7 @@ const ContactUs = () => {
                     <div className='contact-us-info'>
                         <DynamicDotsBackground/>
                         {/* Header */}
-                        <div className="contact-us-header">
+                        <div className="contact-us-header" ref={headerRef}>
                             <h2 className="contact-us-title">Contact Us</h2>
                             <p className="contact-us-subtitle">
                                 Get in touch with us. We're here to help you with any questions or concerns.
@@ -58,11 +89,12 @@ const ContactUs = () => {
                             src={require('../../assets/contact-us/image-01.ppng.png')}
                             alt={'Contact Us'}
                             className='contact-us-img'
+                            ref={imageRef}
                         />
                     </div>
 
                     {/* Contact Form */}
-                    <div className="contact-us-form-wrapper">
+                    <div className="contact-us-form-wrapper" ref={formRef}>
                         <form className="contact-us-form" onSubmit={handleSubmit}>
                             {/* Name Field */}
                             <div className="contact-form-group">
@@ -133,9 +165,11 @@ const ContactUs = () => {
                             </div>
 
                             {/* Submit Button */}
-                            <button type="submit" className="contact-form-submit">
-                                Send Message
-                            </button>
+                            <div className="contact-form-group">
+                                <button type="submit" className="contact-form-submit">
+                                    Send Message
+                                </button>
+                            </div>
                         </form>
                     </div>
                 </div>
