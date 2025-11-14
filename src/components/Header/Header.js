@@ -2,19 +2,12 @@ import React, {useState} from "react";
 import './Header.css'
 import { FaBars, FaTimes } from "react-icons/fa";
 import logo from "../../assets/header/logo.svg";
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import {HashLink} from "react-router-hash-link";
 
 export default function Header() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-    const scrollToSection = (sectionId) => {
-        const element = document.getElementById(sectionId);
-        if (element) {
-            element.scrollIntoView({ behavior: "smooth" });
-            setMobileMenuOpen(false);
-        }
-    };
+    const navigate = useNavigate();
 
     const scrollToTop = () => {
         window.scrollTo({
@@ -98,6 +91,13 @@ export default function Header() {
                         >
                             Contact Us
                         </Link>
+
+                        <button
+                            className="header-login-button"
+                            onClick={() => window.location.href = "https://app.cryptomaster.exchange/login"}
+                        >
+                            Login
+                        </button>
                     </nav>
                 </div>
             </header>
