@@ -78,6 +78,7 @@ const HeroSlide = ({slide, isActive}) => {
                                 </div>
                             </div>
                             <img src={require('../../../assets/hero-section/gold-card.png')} alt='gold card' className='hs-card' />
+                            <DynamicDotsBackground/>
                         </div>
 
                     </div>
