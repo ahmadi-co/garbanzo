@@ -51,7 +51,7 @@ const HeroSlide = ({slide, isActive}) => {
                                     <li className="features-item">Top-up via Crypto - Mastercard</li>
                                 </ul>
                                 <div className='price'>
-                                    <span className='number'>100</span>
+                                    <span className='number'>20</span>
                                     &nbsp;
                                     <span className='currency'>$</span>
                                 </div>

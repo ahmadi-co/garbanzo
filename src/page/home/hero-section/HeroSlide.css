@@ -486,7 +486,7 @@
 
 .hs-card-title {
     font-size: var(--small-font-size);
-    color: var(--first-color);
+    color: white;
     text-align: left;
     font-weight: bold;
     text-transform: uppercase;
@@ -495,13 +495,13 @@
 /* Info Card */
 .hero-section-card {
     background: var(--first-color);
-    width: 150px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    width: 155px;
     height: 100%;
     align-self: center;
     justify-self: center;
     border-radius: 10px;
     padding: 15px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
     position: relative;
 }
 
@@ -531,7 +531,7 @@
 
 .hero-section-card-info {
     margin-top: 10px;
-    color: white;
+    color: #E6E8EB;
 }
 
 .hero-section-card-info .hero-section-card-title {
@@ -545,6 +545,7 @@
 
 .hero-section-card-info .features-item {
     font-size: var(--smaller-font-size);
+    margin-bottom: .3rem;
 }
 
 .hero-section-card-info .number,
@@ -576,7 +577,7 @@
     .hero-section-card {
         width: 210px;
         padding-inline: 1.5rem;
-        padding-block: .5rem;
+        padding-block: 1.5rem;
     }
 
     .hero-section-card:nth-child(3) {
@@ -638,7 +639,6 @@
     }
 
     .hero-section-card-info .price {
-        font-weight: bolder;
         margin-top: 1rem;
     }
 
@@ -677,7 +677,7 @@
 
     .hs-card {
         position: absolute;
-        bottom: -90px;
+        bottom: -120px;
         right: -10px;
         transform: rotate(12deg);
         width: 230px;
@@ -698,11 +698,11 @@
 @media screen and (min-width: 1500px) {
     .hs-card {
         position: absolute;
-        bottom: -130px;
+        bottom: -120px;
         right: -80px;
         transform: rotate(12deg);
-        width: 240px;
-        height: 150px;
+        width: 250px;
+        height: 160px;
         border-radius: 16px;
         overflow: hidden;
     }
