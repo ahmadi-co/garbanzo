@@ -29,7 +29,8 @@ const HeroSlide = ({slide, isActive}) => {
                                 <ul className="features-list">
                                     <li className="features-item">Online Purchases</li>
                                     <li className="features-item">$100.000 Monthly Limit</li>
-                                    <li className="features-item">Top-up via Crypto - Mastercard</li>
+                                    <li className="features-item">Top-up via Crypto</li>
+                                    <li className="features-item">Mastercard</li>
                                 </ul>
                                 <div className='price'>
                                     <span className='number'>FREE</span>
@@ -48,7 +49,8 @@ const HeroSlide = ({slide, isActive}) => {
                                 <ul className="features-list">
                                     <li className="features-item">Cashout From ATM</li>
                                     <li className="features-item">$100,000 Monthly limit</li>
-                                    <li className="features-item">Top-up via Crypto - Mastercard</li>
+                                    <li className="features-item">Top-up via Crypto</li>
+                                    <li className="features-item">Mastercard</li>
                                 </ul>
                                 <div className='price'>
                                     <span className='number'>20</span>
@@ -69,7 +71,8 @@ const HeroSlide = ({slide, isActive}) => {
                                 <ul className="features-list">
                                     <li className="features-item">24k karat Gold Card</li>
                                     <li className="features-item">$100,000 Monthly limit</li>
-                                    <li className="features-item">Top-up via Crypto - Mastercard</li>
+                                    <li className="features-item">Top-up via Crypto</li>
+                                    <li className="features-item">Mastercard</li>
                                 </ul>
 
                                 <div className='price'>

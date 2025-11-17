@@ -20,7 +20,8 @@ const OurCards = () => {
             features: [
                 "Online Purchases",
                 "$100,000 monthly limit",
-                "Top-up via Crypto - Mastercard"
+                "Top-up via Crypto",
+                "Mastercard"
             ],
             price: "FREE",
             currency: "",
@@ -33,7 +34,8 @@ const OurCards = () => {
             features: [
                 "Cashout From ATM",
                 "$100,000 monthly limit",
-                "Top-up via Crypto - Mastercard"
+                "Top-up via Crypto",
+                "Mastercard"
             ],
             price: "20",
             currency: "$",
@@ -46,7 +48,8 @@ const OurCards = () => {
             features: [
                 "24k karat Gold Card",
                 "$100,000 Monthly limit",
-                "Top-up via Crypto - Mastercard"
+                "Top-up via Crypto",
+                "Mastercard"
             ],
             price: "300",
             currency: "$",
