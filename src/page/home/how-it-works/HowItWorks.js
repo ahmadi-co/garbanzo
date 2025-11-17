@@ -117,34 +117,36 @@ export default function HowItWorks({ onBecomeClientClick }) {
     }, []);
 
     return (
-        <section className="how-it-works-container container" ref={sectionRef}>
-            <div className="how-it-works-header" ref={headerRef}>
-                <h2 className="how-it-works-title">How It Works</h2>
-                <p className='how-it-works-description'>
-                    Our process is built around simplicity, transparency, and compliance. From registration to transaction, every step is designed to make crypto operations fast, intuitive, and fully regulated.
-                </p>
-            </div>
+        <section className="section" ref={sectionRef}>
+            <div className='how-it-works-container  container'>
+                <div className="how-it-works-header" ref={headerRef}>
+                    <h2 className="how-it-works-title">How It Works</h2>
+                    <p className='how-it-works-description'>
+                        Our process is built around simplicity, transparency, and compliance. From registration to transaction, every step is designed to make crypto operations fast, intuitive, and fully regulated.
+                    </p>
+                </div>
 
-            <div className="how-it-works-steps">
-                {steps.map((step, index) => (
-                    <div
-                        className="step-card"
-                        key={index}
-                        ref={(el) => (stepsRef.current[index] = el)}
-                    >
-                        <div className="step-icon">{step.icon}</div>
-                        <div className="step-content">
-                            <h3 className="step-title">{step.title}</h3>
-                            <p className="step-description">{step.description}</p>
+                <div className="how-it-works-steps">
+                    {steps.map((step, index) => (
+                        <div
+                            className="step-card"
+                            key={index}
+                            ref={(el) => (stepsRef.current[index] = el)}
+                        >
+                            <div className="step-icon">{step.icon}</div>
+                            <div className="step-content">
+                                <h3 className="step-title">{step.title}</h3>
+                                <p className="step-description">{step.description}</p>
+                            </div>
                         </div>
-                    </div>
-                ))}
-            </div>
+                    ))}
+                </div>
 
-            <div className="how-it-works-cta">
-                <button  onClick={handleClick} ref={ctaRef}>
-                     <span>Contact Us</span> <FiArrowUpRight className='icon' />
-                </button>
+                <div className="how-it-works-cta">
+                    <button  onClick={handleClick} ref={ctaRef}>
+                        <span>Contact Us</span> <FiArrowUpRight className='icon' />
+                    </button>
+                </div>
             </div>
         </section>
     );

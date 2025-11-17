@@ -112,6 +112,7 @@
     line-height: 1.6;
     cursor: pointer;
     width: max-content;
+    max-width: 100%;
 }
 
 .contact-icon {

@@ -176,14 +176,6 @@
     gap: 8px;
 }
 
-.our-card-price-currency {
-    font-size: 2rem;
-    font-weight: bold;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
 .currency-gold {
     background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
 }
@@ -200,18 +192,6 @@
     background: linear-gradient(135deg, #667eea 0%, #f093fb 100%);
 }
 
-.our-card-price-value {
-    font-size: 2.5rem;
-    font-weight: bold;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.price-gold {
-    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
-}
-
 .price-blue {
     background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
 }
@@ -222,6 +202,18 @@
 
 .price-pink {
     background: linear-gradient(135deg, #667eea 0%, #f093fb 100%);
+}
+
+
+.our-card-price-currency,
+.our-card-price-value {
+    font-size: 3rem;
+    font-weight: bold;
+    display: inline-block;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: white;
 }
 
 .price-free {
@@ -285,7 +277,7 @@
     }
 
     .our-cards-grid {
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-template-columns: repeat(2, 1fr);
         gap: 30px;
     }
 }
@@ -339,11 +331,8 @@
         font-size: 0.9rem;
     }
 
+    .our-card-price-currency,
     .our-card-price-value {
-        font-size: 2rem;
-    }
-
-    .our-card-price-currency {
         font-size: 1.5rem;
     }
 }

@@ -1076,7 +1076,7 @@
 }
 
 .transfer-features-box {
-    background: #000053;
+    background: var(--first-color);
     border-radius: 16px;
     padding: 24px 28px;
     display: flex;

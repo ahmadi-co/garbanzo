@@ -106,7 +106,8 @@ const ContactUs = () => {
                             <div className="contact-us-item" onClick={handleMail}>
                                 <FaMapMarkerAlt className="contact-icon" size={20} />
                                 <span>
-                                    Semih Sancar Caddesi, Ersin Dikerman Dükkanları No: 4 Girne, KKTC
+                                    Semih Sancar Caddesi, <br/>
+                                    Ersin Dikerman Dükkanları No: 4 Girne, KKTC
                                 </span>
                             </div>
                             <div className="contact-us-item" onClick={handleMail}>

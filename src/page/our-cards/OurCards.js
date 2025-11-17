@@ -15,6 +15,32 @@ const OurCards = () => {
 
     const cards = [
         {
+            id: "virtual",
+            title: "VIRTUAL CARD",
+            features: [
+                "Online Purchases",
+                "$100,000 monthly limit",
+                "Top-up via Crypto - Mastercard"
+            ],
+            price: "FREE",
+            currency: "",
+            card: VirtualCard,
+            cardColor: "pink",
+        },
+        {
+            id: "CryptoMaster-Card",
+            title: "CryptoMaster Card",
+            features: [
+                "Cashout From ATM",
+                "$100,000 monthly limit",
+                "Top-up via Crypto - Mastercard"
+            ],
+            price: "20",
+            currency: "$",
+            card: PhysicalCard,
+            cardColor: "blue",
+        },
+        {
             id: "gold",
             title: "Metal Card",
             features: [
@@ -27,32 +53,7 @@ const OurCards = () => {
             card: GoldCard,
             cardColor: "gray",
         },
-        {
-            id: "CryptoMaster-Card",
-            title: "CryptoMaster Card",
-            features: [
-                "Cashout From ATM",
-                "$100,000 monthly limit",
-                "Top-up via Crypto - Mastercard"
-            ],
-            price: "100",
-            currency: "$",
-            card: PhysicalCard,
-            cardColor: "blue",
-        },
-        {
-            id: "virtual",
-            title: "VIRTUAL CARD",
-            features: [
-                "Online Purchases",
-                "$100,000 monthly limit",
-                "Top-up via Crypto - Mastercard"
-            ],
-            price: "FREE",
-            currency: "",
-            card: VirtualCard,
-            cardColor: "pink",
-        }
+
     ];
 
     // Animate cards on scroll
@@ -142,16 +143,17 @@ const OurCards = () => {
                                         <div className="our-card-price-container">
                                             {card.price === "FREE" ? (
                                                 <span className={`our-card-price-value price-${card.cardColor} price-free`}>
-                                                {card.price}
-                                            </span>
-                                            ) : (
-                                                <>
-                                                <span className={`our-card-price-currency currency-${card.cardColor}`}>
-                                                    {card.currency}
-                                                </span>
-                                                    <span className={`our-card-price-value price-${card.cardColor}`}>
                                                     {card.price}
                                                 </span>
+                                            ) : (
+                                                <>
+                                                    <span className={`our-card-price-value price-${card.cardColor}`}>
+                                                        {card.price}
+                                                    </span>
+
+                                                    <span className={`our-card-price-currency currency-${card.cardColor}`}>
+                                                        {card.currency}
+                                                    </span>
                                                 </>
                                             )}
                                         </div>
@@ -167,7 +169,7 @@ const OurCards = () => {
                                     {/* CTA Button */}
                                     <button
                                         className={`our-card-cta-button cta-${card.cardColor}`}
-                                        onClick={() => navigate('/contact-us')}
+                                        onClick={() => window.location.href = "https://app.iberbanco.finance/sign_up"}
                                     >
                                         Get Started
                                     </button>

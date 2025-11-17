@@ -11,10 +11,13 @@
 }
 
 .header-container {
-    padding-block: 1rem 1.5rem;
+    padding-block: 1.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.header-logo-container {
 }
 
 .header-logo {

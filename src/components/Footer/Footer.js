@@ -108,7 +108,9 @@ export default function Footer() {
                                 <div className="contact-item" onClick={handleMail}>
                                     <FaMapMarkerAlt className="contact-icon" size={18} />
                                     <span>
-                                        Semih Sancar Caddesi, Ersin Dikerman Dükkanları No: 4 Girne, KKTC
+                                        Semih Sancar Caddesi,
+                                        <br/>
+                                        Ersin Dikerman Dükkanları No: 4 Girne, KKTC
                                     </span>
                                 </div>
                                 <div className="contact-item" onClick={handleMail}>

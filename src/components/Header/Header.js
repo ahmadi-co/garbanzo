@@ -23,7 +23,7 @@ export default function Header() {
 
                     <Link
                         to='/'
-                        className='logo'
+                        className='header-logo-container'
                         >
                         <img
                             src={require('../../assets/header/logo.png')}
@@ -54,19 +54,19 @@ export default function Header() {
                             Home
                         </Link>
                         <HashLink
+                            to='/about-us'
+                            className="nav-link"
+                            onClick={() => setMobileMenuOpen(false)}
+                        >
+                            About Us
+                        </HashLink>
+                        <HashLink
                             to='/#services'
                             className="nav-link"
                             onClick={() => setMobileMenuOpen(false)}
 
                         >
                             Our Services
-                        </HashLink>
-                        <HashLink
-                            to='/#why-us'
-                            className="nav-link"
-                            onClick={() => setMobileMenuOpen(false)}
-                        >
-                            Why Us
                         </HashLink>
                         <Link
                             to='/our-cards'
@@ -75,13 +75,12 @@ export default function Header() {
                         >
                             Cards
                         </Link>
-
                         <HashLink
-                            to='/about-us'
+                            to='/#why-us'
                             className="nav-link"
                             onClick={() => setMobileMenuOpen(false)}
                         >
-                            About Us
+                            Why Us
                         </HashLink>
                         <Link
                             to='/contact-us'
