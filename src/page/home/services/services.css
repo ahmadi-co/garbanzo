@@ -111,7 +111,7 @@
 
 .service-description {
     font-size: 1rem;
-    color: #a0a4b8;
+    color: rgba(255, 255, 255, 0.7);
     line-height: 1.6;
 }
 

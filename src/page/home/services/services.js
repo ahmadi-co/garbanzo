@@ -21,8 +21,8 @@ export default function Services() {
         },
         {
             icon: <FaArrowLeft className="service-icon" />,
-            title: "CRYPTO-TO-CRYPTO EXCHANGE",
-            description: "Seamless swaps between major cryptocurrencies with full transparency."
+            title: "TOPUP CARD WITH CRPTO",
+            description: "Quickly and securely top up your card using cryptocurrency for easy spending anywhere."
         },
         {
             icon: <FaLock className="service-icon" />,

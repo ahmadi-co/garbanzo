@@ -76,7 +76,7 @@ const HeroSlide = ({slide, isActive}) => {
                                 </ul>
 
                                 <div className='price'>
-                                    <span className='number'>300</span>
+                                    <span className='number'>100</span>
                                     <span className='currency'>$</span>
                                 </div>
                             </div>

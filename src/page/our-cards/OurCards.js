@@ -51,7 +51,7 @@ const OurCards = () => {
                 "Top-up via Crypto",
                 "Mastercard"
             ],
-            price: "300",
+            price: "100",
             currency: "$",
             card: GoldCard,
             cardColor: "gray",
