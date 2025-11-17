@@ -99,7 +99,7 @@ export default function Header() {
                             </button>
 
                             <button
-                                className="header-login-button"
+                                className="header-register-button"
                                 onClick={() => window.location.href = "https://app.iberbanco.finance/login"}
                             >
                                 Login

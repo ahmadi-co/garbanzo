@@ -86,16 +86,36 @@
 .header-login-button {
     background-color: white;
     color: var(--first-color);
-    padding-block: 0.5rem;
-    padding-inline: 1rem;
+    border: 1px solid var(--first-color);
+    padding-block: 0.7rem;
+    padding-inline: 1.5rem;
     font-size: var(--normal-font-size);
     font-weight: bold;
     border-radius: 10px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease-in-out;
 }
 
 .header-login-button:hover {
+    background-color: #F2F2F2;
+    transform: scale(1.1);
+}
+
+.header-register-button {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    padding-block: 0.7rem;
+    padding-inline: 1.5rem;
+    font-size: var(--normal-font-size);
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.header-register-button:hover {
+    color: var(--first-color);
     background-color: #F2F2F2;
     transform: scale(1.1);
 }
