@@ -38,14 +38,14 @@ export default function Services() {
 
     useEffect(() => {
         const ctx = gsap.context(() => {
-            // Fade + slide in the left section
+            // Left section animation
             gsap.fromTo(
                 leftRef.current,
-                { opacity: 0, x: -60 },
+                { opacity: 0, x: -40 },
                 {
                     opacity: 1,
                     x: 0,
-                    duration: 1,
+                    duration: 0.8,
                     ease: 'power3.out',
                     scrollTrigger: {
                         trigger: sectionRef.current,
@@ -55,17 +55,16 @@ export default function Services() {
                 }
             );
 
-            // Animate service cards (quick stagger for snappy effect)
+            // Animate service cards one by one
             gsap.fromTo(
                 cardsRef.current,
-                { opacity: 0, y: 40, scale: 0.97 },
+                { opacity: 0, y: 30 },
                 {
                     opacity: 1,
                     y: 0,
-                    scale: 1,
                     duration: 0.7,
                     ease: 'power2.out',
-                    stagger: 0.05, // very short stagger
+                    stagger: 0.25, // one-by-one effect
                     scrollTrigger: {
                         trigger: sectionRef.current,
                         start: 'top 85%',
@@ -77,8 +76,6 @@ export default function Services() {
 
         return () => ctx.revert();
     }, []);
-
-
 
     return (
         <section className="services-container container" id="services" ref={sectionRef}>
