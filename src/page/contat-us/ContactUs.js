@@ -3,6 +3,7 @@ import { gsap } from 'gsap';
 import './ContactUs.css';
 import VerticalWaveBlobs from "../../components/VerticalWaveBlobs/VerticalWaveBlobs";
 import DynamicDotsBackground from "../../components/BlobBackground/DynamicDotsBackground";
+import {FaEnvelope, FaMapMarkerAlt, FaPhone, FaWhatsapp} from "react-icons/fa";
 
 const ContactUs = () => {
     const [formData, setFormData] = useState({
@@ -65,6 +66,25 @@ const ContactUs = () => {
         return () => ctx.revert();
     }, []);
 
+    const handleMail = () => {
+        window.location.href = 'mailto:info@cryptomaster.exchange';
+    };
+
+    const handlePhone = () => {
+        window.open('tel:+905488586787', '_blank');
+    };
+
+    const handleWhatsApp = () => {
+        window.open('https://wa.me/+905391030760', '_blank');
+    };
+
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+        });
+    };
+
     return (
         <main className='main'>
             <VerticalWaveBlobs/>
@@ -80,9 +100,28 @@ const ContactUs = () => {
                             </p>
                         </div>
 
-                        <div className="contact-us-email">
-                            <strong className="contact-us-email-label">Email: </strong>
-                            <a href="mailto:info@cryptomaster.exchange" className="contact-us-email-link">info@cryptomaster.exchange</a>
+
+                        {/* Contact Info */}
+                        <div className="contact-us-details">
+                            <div className="contact-us-item" onClick={handleMail}>
+                                <FaMapMarkerAlt className="contact-icon" size={20} />
+                                <span>
+                                    Semih Sancar Caddesi, Ersin Dikerman Dükkanları No: 4 Girne, KKTC
+                                </span>
+                            </div>
+                            <div className="contact-us-item" onClick={handleMail}>
+                                <FaEnvelope className="contact-icon" size={20} />
+                                <span>info@cryptomaster.exchange</span>
+                            </div>
+                            <div className="contact-us-item" onClick={handlePhone}>
+                                <FaPhone className="contact-icon" size={20} />
+                                <span>+90 548 858 67 87</span>
+                            </div>
+
+                            <div className="contact-us-item" onClick={handleWhatsApp}>
+                                <FaWhatsapp className="contact-icon" size={20} />
+                                <span>+90 539 103 07 60</span>
+                            </div>
                         </div>
 
                         <img

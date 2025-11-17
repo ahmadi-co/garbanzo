@@ -1,7 +1,6 @@
 import React, {useState} from "react";
 import './Header.css'
 import { FaBars, FaTimes } from "react-icons/fa";
-import logo from "../../assets/header/logo.svg";
 import {Link, useNavigate} from "react-router-dom";
 import {HashLink} from "react-router-hash-link";
 
@@ -27,7 +26,7 @@ export default function Header() {
                         className='logo'
                         >
                         <img
-                            src={logo}
+                            src={require('../../assets/header/logo.png')}
                             className="header-logo"
                             alt="Logo"
                         />
@@ -94,7 +93,14 @@ export default function Header() {
 
                         <button
                             className="header-login-button"
-                            onClick={() => window.location.href = "https://app.cryptomaster.exchange/login"}
+                            onClick={() => window.location.href = "https://app.iberbanco.finance/sign_up"}
+                        >
+                            Register
+                        </button>
+
+                        <button
+                            className="header-login-button"
+                            onClick={() => window.location.href = "https://app.iberbanco.finance/login"}
                         >
                             Login
                         </button>

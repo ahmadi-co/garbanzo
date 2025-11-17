@@ -510,13 +510,6 @@
     width: 180px;
 }
 
-@media screen  and (max-width: 768px) {
-    .hero-section-card:nth-child(3) .hero-section-virtual-card {
-        margin-bottom: 35px;
-        left: 15px;
-    }
-}
-
 /* Card */
 .hs-card {
     position: absolute;
@@ -527,6 +520,13 @@
     width: 120px;
     height: 70px;
     border-radius: 5px;
+}
+
+@media screen  and (max-width: 768px) {
+    .hero-section-card:nth-child(3) .hero-section-virtual-card {
+        margin-bottom: 35px;
+        right: -5px;
+    }
 }
 
 .hero-section-card-info {
@@ -703,7 +703,7 @@
 @media screen and (min-width: 1500px) {
     .hs-card {
         position: absolute;
-        bottom: -100px;
+        bottom: -130px;
         right: -80px;
         transform: rotate(12deg);
         width: 240px;

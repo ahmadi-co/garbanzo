@@ -1,22 +1,24 @@
 import React from 'react';
 import './footer.css';
 import { FaTwitter, FaFacebook, FaLinkedin, FaInstagram, FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
-import logo from '../../assets/header/logo.svg'
+import { FaWhatsapp } from "react-icons/fa";
 import RowDotBackground from "../BlobBackground/RowDotBackground";
 import {Link} from "react-router-dom";
 import {HashLink} from "react-router-hash-link";
 
 export default function Footer() {
-    const scrollToSection = (sectionId) => {
-        const element = document.getElementById(sectionId);
-        if (element) {
-            element.scrollIntoView({ behavior: 'smooth' });
-        }
-    };
 
     const handleMail = () => {
         window.location.href = 'mailto:info@cryptomaster.exchange';
-    }
+    };
+
+    const handlePhone = () => {
+        window.open('tel:+905488586787', '_blank');
+    };
+
+    const handleWhatsApp = () => {
+        window.open('https://wa.me/+905391030760', '_blank');
+    };
 
     const scrollToTop = () => {
         window.scrollTo({
@@ -37,7 +39,7 @@ export default function Footer() {
                             {/* Company Info */}
                             <div className="footer-section">
                                 <div className="footer-logo">
-                                    <img src={logo} className='footer-logo' />
+                                    <img src={require('../../assets/header/logo.png')} className='footer-logo' />
                                 </div>
                                 <p className="footer-description">
                                     Your reliable partner in the world of crypto payments.
@@ -104,8 +106,23 @@ export default function Footer() {
                             <div className="footer-section">
                                 <h3 className="footer-title">Contact Us</h3>
                                 <div className="contact-item" onClick={handleMail}>
+                                    <FaMapMarkerAlt className="contact-icon" size={18} />
+                                    <span>
+                                        Semih Sancar Caddesi, Ersin Dikerman Dükkanları No: 4 Girne, KKTC
+                                    </span>
+                                </div>
+                                <div className="contact-item" onClick={handleMail}>
                                     <FaEnvelope className="contact-icon" size={18} />
                                     <span>info@cryptomaster.exchange</span>
+                                </div>
+                                <div className="contact-item" onClick={handlePhone}>
+                                    <FaPhone className="contact-icon" size={18} />
+                                    <span>+90 548 858 67 87</span>
+                                </div>
+
+                                <div className="contact-item" onClick={handleWhatsApp}>
+                                    <FaWhatsapp className="contact-icon" size={18} />
+                                    <span>+90 539 103 07 60</span>
                                 </div>
                             </div>
                         </div>

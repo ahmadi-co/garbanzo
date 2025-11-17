@@ -44,6 +44,7 @@
     font-size: 1.75rem;
     font-weight: bold;
     color: white;
+    width: 180px;
     margin-bottom: 0.5rem;
     display: flex;
     align-items: center;
@@ -109,6 +110,8 @@
     color: #d1d5db;
     font-size: 0.95rem;
     line-height: 1.6;
+    cursor: pointer;
+    width: max-content;
 }
 
 .contact-icon {
@@ -161,6 +164,10 @@
         flex-direction: row;
         justify-content: space-between;
         text-align: left;
+    }
+
+    .footer-logo {
+        width: 220px;
     }
 }
 

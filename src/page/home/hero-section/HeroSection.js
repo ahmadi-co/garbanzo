@@ -8,10 +8,10 @@ const HeroSection = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
     const [slides] = useState([
 
+        { id: 0, type: "cards" },
         { id: 1,},
-        { id: 2, type: "cards" },
-        { id: 3, type: "transfer" },
-        { id: 4, type: "atm" },
+        { id: 2, type: "transfer" },
+        { id: 3, type: "atm" },
     ]);
 
     const totalSlides = slides.length;
