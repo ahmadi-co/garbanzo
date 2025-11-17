@@ -552,12 +552,6 @@
     font-size: var(--h1-font-size);
     font-weight: bolder;
     margin-top: 1rem;
-    filter: drop-shadow(-3px 3px 0px #4173BF);
-}
-
-.hero-section-card-info .price {
-    font-weight: bolder;
-    margin-top: 1rem;
 }
 
 .hero-section-card-info .currency {
@@ -572,8 +566,10 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent;
-    filter: drop-shadow(-3px 3px 0px var(--first-color));
+    /* Shadow removed */
 }
+
+
 
 
 @media screen and (min-width: 500px) {
