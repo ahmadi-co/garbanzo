@@ -103,6 +103,10 @@
     border-top: 4px solid #9ca3af;
 }
 
+.our-card-pink {
+    border-top: 4px solid #f093fb;
+}
+
 /* Card Title */
 .our-card-title {
     font-size: 2rem;
@@ -192,6 +196,10 @@
     background: linear-gradient(135deg, #9ca3af 0%, #6b7280 100%);
 }
 
+.currency-pink {
+    background: linear-gradient(135deg, #667eea 0%, #f093fb 100%);
+}
+
 .our-card-price-value {
     font-size: 2.5rem;
     font-weight: bold;
@@ -210,6 +218,10 @@
 
 .price-gray {
     background: linear-gradient(135deg, #9ca3af 0%, #6b7280 100%);
+}
+
+.price-pink {
+    background: linear-gradient(135deg, #667eea 0%, #f093fb 100%);
 }
 
 .price-free {
@@ -259,6 +271,10 @@
 }
 
 .cta-gray {
+    background: linear-gradient(135deg, #9ca3af 0%, #6b7280 100%);
+}
+
+.cta-pink {
     background: linear-gradient(135deg, #667eea 0%, #f093fb 100%);
 }
 

@@ -14,7 +14,7 @@ export default function GoldCard() {
                                 cx={j * 8}
                                 cy={i * 8}
                                 r={Math.random() > 0.7 ? 1.5 : 0}
-                                fill="#996515"
+                                fill="#666666"
                                 opacity="0.3"
                             />
                         ))

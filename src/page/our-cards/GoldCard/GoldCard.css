@@ -9,11 +9,11 @@
     width: 100%;
     max-width: 420px;
     aspect-ratio: 1.586;
-    background: linear-gradient(135deg, #f59e0b 0%, #d97706 50%, #b45309 100%);
+    background: linear-gradient(135deg, #d4d4d4 0%, #a3a3a3 50%, #737373 100%);
     border-radius: 16px;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
     overflow: hidden;
-    color: white;
+    color: black;
 }
 
 .gold-card__dots {
@@ -52,9 +52,9 @@
 }
 
 .gold-card__dot {
-    width: 4px;
-    height: 4px;
-    background-color: rgba(255, 255, 255, 0.7);
+    width: calc(var(--smaller-font-size) - .4rem);
+    height: calc(var(--smaller-font-size) - .4rem);
+    background-color: black;
     border-radius: 50%;
 }
 

@@ -16,25 +16,26 @@ const OurCards = () => {
     const cards = [
         {
             id: "gold",
-            title: "GOLD CARD",
+            title: "Metal Card",
             features: [
-                "$100,000 monthly limit",
-                "Metal-crafted premium card",
-                "Low-cost money transfers"
+                "24k karat Gold Card",
+                "$100,000 Monthly limit",
+                "Top-up via Crypto - Mastercard"
             ],
-            price: "X",
+            price: "300",
             currency: "$",
             card: GoldCard,
-            cardColor: "gold",
+            cardColor: "gray",
         },
         {
-            id: "physical",
-            title: "PHYSICAL CARD",
+            id: "CryptoMaster-Card",
+            title: "CryptoMaster Card",
             features: [
+                "Cashout From ATM",
                 "$100,000 monthly limit",
-                "Low-cost money transfers"
+                "Top-up via Crypto - Mastercard"
             ],
-            price: "20",
+            price: "100",
             currency: "$",
             card: PhysicalCard,
             cardColor: "blue",
@@ -43,13 +44,14 @@ const OurCards = () => {
             id: "virtual",
             title: "VIRTUAL CARD",
             features: [
+                "Online Purchases",
                 "$100,000 monthly limit",
-                "Low-cost money transfers"
+                "Top-up via Crypto - Mastercard"
             ],
             price: "FREE",
             currency: "",
             card: VirtualCard,
-            cardColor: "gray",
+            cardColor: "pink",
         }
     ];
 

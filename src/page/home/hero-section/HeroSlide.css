@@ -489,6 +489,7 @@
     color: var(--first-color);
     text-align: left;
     font-weight: bold;
+    text-transform: uppercase;
 }
 
 /* Info Card */
@@ -627,9 +628,9 @@
 
     .hs-card {
         position: absolute;
-        bottom: -90px;
+        bottom: -100px;
         width: 220px;
-        height: 120px;
+        height: 130px;
     }
 
     .hero-section-card-info .hero-section-card-title {
@@ -773,7 +774,7 @@
 
     .crypto-button {
         padding: 16px 48px;
-        margin-top: 3rem;
+        margin-top: 4rem;
 
     }
 }
@@ -1095,7 +1096,7 @@
 .transfer-check-icon {
     flex-shrink: 0;
     margin-top: 2px;
-    background-color: #002600;
+    background-color: var(--first-color-darker);
     padding: 2px;
 }
 
