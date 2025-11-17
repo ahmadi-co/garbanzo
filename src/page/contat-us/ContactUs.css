@@ -1,7 +1,8 @@
 .contact-us {
     position: relative;
     width: 100%;
-    padding: 150px 60px;
+    padding-block: 150px 60px;
+    padding-inline: 20px;
     overflow: hidden;
 }
 
@@ -74,8 +75,6 @@
     font-size: 0.95rem;
     line-height: 1.6;
     cursor: pointer;
-    width: max-content;
-    max-width: 100%;
     text-wrap: wrap;
 }
 
@@ -195,18 +194,18 @@
 /* Responsive Design */
 @media (max-width: 1200px) {
     .contact-us {
-        padding: 140px 40px;
+        padding-block: 180px ;
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
     .contact-us-container {
         display: grid;
         grid-template-columns: 1fr;
     }
 
     .contact-us {
-        padding: 125px 20px;
+        padding-block: 200px;
     }
 
     .contact-us-header {
@@ -232,7 +231,7 @@
 
 @media (max-width: 480px) {
     .contact-us {
-        padding: 120px 15px;
+        padding-block: 200px;
     }
 
     .contact-us-title {

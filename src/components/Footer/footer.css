@@ -6,7 +6,7 @@
 .footer-container {
     position: absolute;
     bottom: 0;
-    left: 0;
+    right: 0;
     width: 100%;
     border-top: .5px solid hwb(0 100% 0% / 0.10);
     background: hwb(0 100% 0% / 0.01);
@@ -82,7 +82,6 @@
     cursor: pointer;
     display: inline-block;
     position: relative;
-    width: max-content;
     padding-left: 0;
 }
 
@@ -111,8 +110,6 @@
     font-size: 0.95rem;
     line-height: 1.6;
     cursor: pointer;
-    width: max-content;
-    max-width: 100%;
 }
 
 .contact-icon {

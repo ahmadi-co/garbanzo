@@ -129,7 +129,7 @@
 /* Responsive Design */
 @media (max-width: 1200px) {
   .about-us {
-    padding: 80px 40px;
+    padding-block: 190px 200px;
   }
 
   .about-us-stats {
@@ -140,7 +140,7 @@
 
 @media (max-width: 768px) {
   .about-us {
-    padding: 60px 20px;
+    padding-block: 170px;
   }
 
   .about-us-header {
@@ -177,7 +177,7 @@
 
 @media (max-width: 480px) {
   .about-us {
-    padding: 50px 15px;
+    padding-block: 200px;
   }
 
   .about-us-title {

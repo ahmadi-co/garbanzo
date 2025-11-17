@@ -273,7 +273,7 @@
 /* Responsive Design */
 @media (max-width: 1200px) {
     .our-cards {
-        padding-block: 120px;
+        padding-block: 250px;
     }
 
     .our-cards-grid {
@@ -284,7 +284,7 @@
 
 @media (max-width: 768px) {
     .our-cards {
-        padding-block: 115px;
+        padding-block: 230px;
     }
 
     .our-cards-header {
@@ -312,7 +312,7 @@
 
 @media (max-width: 480px) {
     .our-cards {
-        padding-block: 110px;
+        padding-block: 200px;
     }
 
     .our-cards-title {

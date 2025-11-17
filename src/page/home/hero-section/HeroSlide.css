@@ -494,7 +494,7 @@
 
 /* Info Card */
 .hero-section-card {
-    background-color: white;
+    background-color: #F2F2F2;
     width: 150px;
     height: 100%;
     align-self: center;
@@ -561,19 +561,20 @@
 }
 
 .hero-section-card-info .currency {
-
-    /* Gradient text */
+    display: inline-block;
     background: linear-gradient(
+            135deg,
             #4173BF 15%,
             #CFDCEF 60%,
             #4173BF 80%
     );
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-
-    /* Shadow that won’t disappear */
+    color: transparent;
     filter: drop-shadow(-3px 3px 0px var(--first-color));
 }
+
 
 @media screen and (min-width: 500px) {
     .hero-section-card {
@@ -729,11 +730,11 @@
     cursor: pointer;
     overflow: hidden;
     transition: all 0.3s ease;
-    box-shadow: 0 0px 7px hsla(294 92.9% 100% / 0.30);
+    box-shadow: 0 0px 13px hsla(294 92.9% 100% / 0.30);
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-inline: auto;
-    margin-top: 1rem;
+    margin-top: 2.8rem;
 }
 
 .crypto-button.hover {

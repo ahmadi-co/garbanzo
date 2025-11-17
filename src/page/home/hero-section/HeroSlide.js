@@ -21,23 +21,21 @@ const HeroSlide = ({slide, isActive}) => {
 
                     <div className='hs-cards-grid'>
                         <div className="hero-section-card">
-                            <h1 className="hs-card-title">Metal Card</h1>
+                            <h1 className="hs-card-title">VIRTUAL CARD</h1>
                             <div className='hero-section-card-info'>
                                 <p className='hero-section-card-title'>
                                     Features:
                                 </p>
                                 <ul className="features-list">
-                                    <li className="features-item">24k karat Gold Card</li>
-                                    <li className="features-item">$100,000 Monthly limit</li>
+                                    <li className="features-item">Online Purchases</li>
+                                    <li className="features-item">$100.000 Monthly Limit</li>
                                     <li className="features-item">Top-up via Crypto - Mastercard</li>
                                 </ul>
-
                                 <div className='price'>
-                                    <span className='number'>300</span>
-                                    <span className='currency'>$</span>
+                                    <span className='number'>FREE</span>
                                 </div>
                             </div>
-                            <img src={require('../../../assets/hero-section/gold-card.png')} alt='gold card' className='hs-card' />
+                            <img src={require('../../../assets/hero-section/virtual-card.png')} alt='gold card' className='hs-card hero-section-virtual-card' />
                             <DynamicDotsBackground/>
                         </div>
 
@@ -63,23 +61,25 @@ const HeroSlide = ({slide, isActive}) => {
                         </div>
 
                         <div className="hero-section-card">
-                            <h1 className="hs-card-title">VIRTUAL CARD</h1>
+                            <h1 className="hs-card-title">Metal Card</h1>
                             <div className='hero-section-card-info'>
                                 <p className='hero-section-card-title'>
                                     Features:
                                 </p>
                                 <ul className="features-list">
-                                    <li className="features-item">Online Purchases</li>
-                                    <li className="features-item">$100.000 Monthly Limit</li>
+                                    <li className="features-item">24k karat Gold Card</li>
+                                    <li className="features-item">$100,000 Monthly limit</li>
                                     <li className="features-item">Top-up via Crypto - Mastercard</li>
                                 </ul>
+
                                 <div className='price'>
-                                    <span className='number'>FREE</span>
+                                    <span className='number'>300</span>
+                                    <span className='currency'>$</span>
                                 </div>
                             </div>
-                            <img src={require('../../../assets/hero-section/virtual-card.png')} alt='gold card' className='hs-card hero-section-virtual-card' />
-                            <DynamicDotsBackground/>
+                            <img src={require('../../../assets/hero-section/gold-card.png')} alt='gold card' className='hs-card' />
                         </div>
+
                     </div>
 
                     <button

@@ -153,7 +153,8 @@ p {
 /* -------------------- REUSABLE CSS CLASSES -------------------- */
 .container {
     max-width: var(--max-width-container);
-    margin-inline: 1rem;
+    margin-inline: auto;
+    padding-inline: 2rem;
 
 }
 
@@ -240,9 +241,9 @@ p {
 
 /* ---- BREAKPOINTS ---- */
 /* FOR SMALL DEVICES */
-@media screen and (max-width: 340px) {
+@media screen and (max-width: 500px) {
     .container {
-        margin-inline: 1rem;
+        padding-inline: 1.5rem;
     }
 }
 
@@ -259,6 +260,10 @@ p {
 
     .section-title {
         margin-bottom: 1.9rem;
+    }
+
+    .container {
+        padding-inline: 1.7rem;
     }
 }
 

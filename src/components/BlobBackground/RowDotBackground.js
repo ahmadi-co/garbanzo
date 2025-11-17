@@ -6,6 +6,8 @@ export default function RowDotBackground() {
             <style jsx>{`
                 .row-dot-container {
                     position: absolute;
+                    left: 50%;
+                    transform: translateX(-50%);
                     width: 100%;
                     height: 100%;
                     overflow: hidden;

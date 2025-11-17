@@ -117,7 +117,7 @@ export default function HowItWorks({ onBecomeClientClick }) {
     }, []);
 
     return (
-        <section className="section" ref={sectionRef}>
+        <section className="" ref={sectionRef}>
             <div className='how-it-works-container  container'>
                 <div className="how-it-works-header" ref={headerRef}>
                     <h2 className="how-it-works-title">How It Works</h2>
