@@ -494,7 +494,7 @@
 
 /* Info Card */
 .hero-section-card {
-    background: hsla(0 0% 100% / 0.13);
+    background: hsla(0 0% 100% / 0.10);
     backdrop-filter: blur(17px);
     border: 1px solid rgba(255, 255, 255, 0.2);
     width: 155px;
