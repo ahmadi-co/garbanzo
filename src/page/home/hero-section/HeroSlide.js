@@ -20,36 +20,65 @@ const HeroSlide = ({slide, isActive}) => {
                     </h1>
 
                     <div className='hs-cards-grid'>
-                        <div className="info-card">
+                        <div className="hero-section-card">
                             <h1 className="hs-card-title">GOLD CARD</h1>
-                            <div className="hs-card gold-card">
-                                <div className="hs-chip">
-                                    <div className="chip-pattern"></div>
+                            <div className='hero-section-card-info'>
+                                <p className='hero-section-card-title'>
+                                    Features:
+                                </p>
+                                <ul className="features-list">
+                                    <li className="features-item">$100,000 Monthly limit</li>
+                                    <li className="features-item">Cheap Money Transfer</li>
+                                </ul>
+
+                                <div className='price'>
+                                    <span className='number'>FREE</span>
                                 </div>
                             </div>
+                            <img src={require('../../../assets/hero-section/gold-card.png')} alt='gold card' className='hs-card' />
                             <DynamicDotsBackground/>
                         </div>
 
-                        <div className="info-card">
+                        <div className="hero-section-card">
                             <h1 className="hs-card-title">PHYSICAL CARD</h1>
-                            <div className="hs-card physical-card">
-                                <div className="hs-chip">
-                                    <div className="chip-pattern"></div>
+                            <div className='hero-section-card-info'>
+                                <h4>
+                                    Features:
+                                </h4>
+                                <ul className="features-list">
+                                    <li className="features-item">$100,000 Monthly limit</li>
+                                    <li className="features-item">Cheap Money Transfer</li>
+                                </ul>
+                                <div className='price'>
+                                    <span className='number'>100</span>
+                                    &nbsp;
+                                    <span className='currency'>$</span>
                                 </div>
                             </div>
+                            <img src={require('../../../assets/hero-section/physical-card.png')} alt='gold card' className='hs-card' />
                             <DynamicDotsBackground/>
                         </div>
 
-                        <div className="info-card">
+                        <div className="hero-section-card">
                             <h1 className="hs-card-title">VERTICAL CARD</h1>
-                            <div className="hs-card virtual-card">
-                                <div className="hs-chip">
-                                    <div className="chip-pattern"></div>
+                            <div className='hero-section-card-info'>
+                                <h4>
+                                    Features:
+                                </h4>
+                                <ul className="features-list">
+                                    <li className="features-item">$100,000 Monthly limit</li>
+                                    <li className="features-item">Metal Craft Card</li>
+                                    <li className="features-item">Cheap Money Transfer</li>
+                                </ul>
+                                <div className='price'>
+                                    <span className='number'>X</span>
+                                    &nbsp;
+                                    <span className='currency'>$</span>
                                 </div>
                             </div>
+                            <img src={require('../../../assets/hero-section/virtual-card.png')} alt='gold card' className='hs-card hero-section-virtual-card' />
                             <DynamicDotsBackground/>
                         </div>
-
                     </div>
 
                     <button
@@ -78,7 +107,7 @@ const HeroSlide = ({slide, isActive}) => {
                         {/* Left Side - Brand and Main Slogan */}
                         <div className="transfer-content-left">
                             <h1 className="transfer-main-headline">
-                                Safe Money Transfer With Low
+                                Safe Money Transfer With Low &nbsp;
                                 <span className="transfer-highlight">Commission</span>
                             </h1>
                         </div>
@@ -108,11 +137,10 @@ const HeroSlide = ({slide, isActive}) => {
                         <div className="transfer-content-right">
                             <div className="transfer-graph-container">
                                 <DynamicDotsBackground/>
-
                                 <img
                                     src={require('../../../assets/hero-section/hero-section-01.png')}
                                     alt="Arrow Graph"
-                                    className="transfer-graph-image"
+                                    className="transfer-arrow-image"
                                 />
                             </div>
                         </div>
@@ -137,32 +165,30 @@ const HeroSlide = ({slide, isActive}) => {
                                 PAY EASILY!
                             </h2>
                         </div>
-                        <div className='atm-machine-image'>
-                            <img
-                                src={require('../../../assets/hero-section/atm-machine.png')}
-                                alt="Arrow Graph"
-                                className="atm-machine-img"
-                            />
-                        </div>
-                        <div className='atm-content'>
 
+                        {/* Right Side - ATM and Info Boxes */}
+                        <div className="atm-content-right">
+                            {/* Top Info Box */}
+                            <div className="atm-info-box atm-info-box-top">
+                                <svg className="atm-play-icon" width="20" height="20" viewBox="0 0 24 24"
+                                     fill="#213A80">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                                <p className="atm-info-text">Withdraw money from ATM with your Crypto Card and pay EASILY.</p>
+                            </div>
 
-                            {/* Right Side - ATM and Info Boxes */}
-                            <div className="atm-content-right">
-                                {/* Top Info Box */}
-                                <div className="atm-info-box atm-info-box-top">
-                                    <svg className="atm-play-icon" width="20" height="20" viewBox="0 0 24 24"
-                                         fill="#213A80">
-                                        <path d="M8 5v14l11-7z"/>
-                                    </svg>
-                                    <p className="atm-info-text">Withdraw money from ATM with your Crypto Card and pay EASILY.</p>
-                                </div>
+                            <div className='atm-machine-image'>
+                                <img
+                                    src={require('../../../assets/hero-section/atm-machine.png')}
+                                    alt="Arrow Graph"
+                                    className="atm-machine-img"
+                                />
+                            </div>
 
-                                {/* Bottom Info Box */}
-                                <div className="atm-info-box atm-info-box-bottom">
-                                    <p className="atm-info-title">Need assistance?</p>
-                                    <p className="atm-info-text">CryptoMaster at Your Service.</p>
-                                </div>
+                            {/* Bottom Info Box */}
+                            <div className="atm-info-box atm-info-box-bottom">
+                                <p className="atm-info-text">Need assistance?</p>
+                                <p className="atm-info-text">CryptoMaster at Your Service.</p>
                             </div>
                         </div>
                     </div>
@@ -244,4 +270,7 @@ const HeroSlide = ({slide, isActive}) => {
 };
 
 export default HeroSlide;
+
+
+
 

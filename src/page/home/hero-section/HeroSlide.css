@@ -477,22 +477,24 @@
     width: 100%;
     height: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    row-gap: -20px;
-    column-gap: 1rem;
+    grid-template-columns: max-content max-content;
+    justify-content: space-between;
+    row-gap: 4rem;
+    padding-block: 1rem;
 }
 
 .hs-card-title {
     font-size: var(--small-font-size);
-    color: white;
-    text-align: center;
+    color: var(--first-color);
+    text-align: left;
+    font-weight: bold;
 }
 
 /* Info Card */
-.info-card {
-    background-color: rgba(255, 255, 255, 0.1);
+.hero-section-card {
+    background-color: white;
     width: 150px;
-    height: 100px;
+    height: 100%;
     align-self: center;
     justify-self: center;
     border-radius: 10px;
@@ -501,16 +503,15 @@
     position: relative;
 }
 
-.info-card:nth-child(3) {
+.hero-section-card:nth-child(3) {
     grid-column: span 2;
     width: 180px;
-    height: 120px;
 }
 
 @media screen  and (max-width: 768px) {
-    .info-card:nth-child(3) .virtual-card {
-        width: 155px;
-        height: 90px;
+    .hero-section-card:nth-child(3) .hero-section-virtual-card {
+        margin-bottom: 35px;
+        left: 15px;
     }
 }
 
@@ -519,56 +520,63 @@
     position: absolute;
     right: 50%;
     transform: translateX(50%);
-    bottom: -20px;
+    bottom: -50px;
     margin-inline: auto;
     width: 120px;
     height: 70px;
     border-radius: 5px;
 }
 
-.info-card .gold-card {
-    background: linear-gradient(135deg, #f59e0b 0%, #d97706 50%, #b45309 100%);
-    box-shadow: 0 15px 50px rgba(255, 215, 0, 0.4);
+.hero-section-card-info {
+    margin-top: 10px;
+    color: black;
 }
 
-.info-card .virtual-card {
-    box-shadow: 0 15px 50px rgba(118, 75, 162, 0.3);
-    background: linear-gradient(150deg, #667eea 0%, #764ba2 50%, #F7C4FD 300%);
-}
-.hs-chip {
-    margin-top: 15%;
-    margin-left: 7%;
-    width: 13px;
-    height: 10px;
-    background: linear-gradient(135deg, #fff 0%, #f0f0f0 100%);
-    border-radius: 3px;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+.hero-section-card-info .hero-section-card-title {
+    font-size: var(--small-font-size);
 }
 
-.chip-pattern {
-    width: 100%;
-    height: 100%;
-    background: repeating-linear-gradient(
-            45deg,
-            transparent,
-            transparent 2px,
-            rgba(0, 0, 0, 0.03) 2px,
-            rgba(0, 0, 0, 0.03) 4px
+.hero-section-card-info .features-list {
+    list-style: disc inside;
+    margin-top: .5rem;
+}
+
+.hero-section-card-info .features-item {
+    font-size: var(--smaller-font-size);
+}
+
+.hero-section-card-info .number,
+.hero-section-card-info .currency {
+    font-size: var(--h1-font-size);
+    font-weight: bolder;
+    margin-top: 1rem;
+    filter: drop-shadow(-3px 3px 0px #4173BF);
+}
+
+.hero-section-card-info .price {
+    font-weight: bolder;
+    margin-top: 1rem;
+}
+
+.hero-section-card-info .currency {
+
+    /* Gradient text */
+    background: linear-gradient(
+            #4173BF 15%,
+            #CFDCEF 60%,
+            #4173BF 80%
     );
-}
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 
-
-.info-card .physical-card {
-    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
-    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.6),
-    inset 0 0 40px rgba(255, 255, 255, 0.05);
+    /* Shadow that won’t disappear */
+    filter: drop-shadow(-3px 3px 0px var(--first-color));
 }
 
 @media screen and (min-width: 768px) {
     .hs-cards-grid {
         column-gap: 1rem;
-        row-gap: 6rem;
+        row-gap: 7rem;
         margin-bottom: 3rem;
     }
 
@@ -576,10 +584,13 @@
         margin-bottom: 1rem;
     }
 
-    .info-card {
+    .hero-section-card {
         width: 280px;
-        height: 180px;
         padding-block: 1.5rem;
+    }
+
+    .hero-section-card-info {
+        margin-top: 20px;
     }
 
     .hs-card-title {
@@ -587,55 +598,64 @@
     }
 
 
-    .info-card:nth-child(3) {
+    .hero-section-card:nth-child(3) {
         width: 280px;
-        height: 180px;
     }
 
     .hs-card {
+        position: absolute;
+        bottom: -90px;
         width: 220px;
         height: 120px;
     }
 
-    .hs-chip {
-        margin-top: 15%;
-        margin-left: 7%;
-        width: 35px;
-        height: 25px;
-        border-radius: 6px;
+    .hero-section-card-info .hero-section-card-title {
+        font-size: var(--normal-font-size);
+    }
+
+    .hero-section-card-info .features-item {
+        font-size: 1rem;
+    }
+
+    .hero-section-card-info .price {
+        font-weight: bolder;
+        margin-top: 1rem;
+    }
+
+    .hero-section-card-info .number {
+        font-size: var(--big-font-size);
     }
 }
 
 
-@media screen and (min-width: 1100px) {
+@media screen and (min-width: 1320px) {
     .hs-cards-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: max-content max-content max-content;
+        justify-content: space-between;
         width: 100%;
         height: 100%;
         display: grid;
         column-gap: 1rem;
-        row-gap: 4rem;
+        row-gap: 5rem;
     }
 
-    .info-card {
+    .hero-section-card {
         width: 320px;
-        height: 220px;
         padding-block: 1.5rem;
     }
 
-    .info-card:nth-child(3) {
+    .hero-section-card:nth-child(3) {
         width: 320px;
-        height: 220px;
         grid-column: auto;
     }
 
     .hs-card {
         position: absolute;
-        bottom: -45px;
-        right: -30px;
+        bottom: -90px;
+        right: -160px;
         transform: rotate(12deg);
-        width: 280px;
-        height: 176px;
+        width: 270px;
+        height: 160px;
         border-radius: 16px;
         overflow: hidden;
     }
@@ -730,7 +750,7 @@
     width: 100%;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
     gap: 60px;
     align-items: center;
 }
@@ -739,6 +759,7 @@
 .atm-content-left {
     display: flex;
     flex-direction: column;
+    text-align: center;
     gap: 20px;
 }
 
@@ -778,9 +799,15 @@
 /* Right Side Content */
 .atm-content-right {
     display: flex;
-    flex-direction: column;
-    gap: 20px;
+    flex-direction: row;
     position: relative;
+    max-height: 130px;
+    border: 2px dashed #ffffff;
+    border-radius: 12px;
+    padding: 16px 20px;
+    align-items: end;
+    gap: 12px;
+    animation: fadeInUp 0.6s ease both;
 }
 
 /* ATM Machine Placeholder */
@@ -813,18 +840,14 @@
     font-style: italic;
 }
 
-.atm-content {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
 
 .atm-machine-image {
-    justify-self: end;
+    display: inline-block;
+    margin-bottom: 0;
 }
 
 .atm-machine-img {
-    width: 200px;
+    width: 300px;
 }
 
 @keyframes fadeInRight {
@@ -840,9 +863,6 @@
 
 /* Info Boxes */
 .atm-info-box {
-    background: white;
-    border: 2px dashed #213A80;
-    border-radius: 12px;
     padding: 16px 20px;
     display: flex;
     align-items: center;
@@ -858,35 +878,48 @@
     animation-delay: 0.7s;
     flex-direction: column;
     align-items: flex-start;
+    padding-block: .5rem;
     gap: 8px;
 }
 
 .atm-play-icon {
     flex-shrink: 0;
+    border: 3px solid #00ffff;
+    background-color: var(--first-color);
+    color: white;
+    border-radius: 50%;
+}
+
+.atm-play-icon path {
+    stroke: #ffffff;
+    fill: #ffffff;
 }
 
 .atm-info-title {
     color: #213A80;
     font-size: 1rem;
     font-weight: 600;
-    margin: 0;
 }
 
 .atm-info-text {
-    color: #374151;
+    color: #ffffff;
     font-size: 0.95rem;
-    margin: 0;
     line-height: 1.5;
 }
 
 /* Responsive Design for ATM Slide */
 @media (max-width: 1200px) {
+    .atm-content-right {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        max-height: 100%;
+    }
+}
+@media (max-width: 1200px) {
     .atm-wrapper {
         gap: 16px;
-    }
-
-    .atm-content {
-        flex-direction: row;
     }
 
     .atm-machine-img {
@@ -963,13 +996,14 @@
     max-width: 1400px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 2fr 1fr;
     gap: 40px;
     align-items: center;
 }
 
 /* Left Side - Brand and Headline */
 .transfer-content-left {
+    text-align: center;
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -993,17 +1027,17 @@
 .transfer-content-middle {
     display: flex;
     flex-direction: column;
-    padding-inline: 1.5rem;
     gap: 20px;
     animation: fadeInUp 0.8s ease 0.4s both;
 }
 
 .transfer-features-box {
-    background: rgba(30, 58, 138, 0.55);
+    background: #000053;
     border-radius: 16px;
     padding: 24px 28px;
     display: flex;
     flex-direction: column;
+    width: 100%;
     gap: 16px;
     backdrop-filter: blur(10px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
@@ -1018,11 +1052,13 @@
 .transfer-check-icon {
     flex-shrink: 0;
     margin-top: 2px;
+    background-color: #002600;
+    padding: 2px;
 }
 
 .transfer-check-icon path {
-    stroke: #00ffff;
-    fill: none;
+    stroke: #ffffff;
+    fill: #ffffff;
 }
 
     .transfer-feature-text {
@@ -1045,12 +1081,23 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 100px;
+    width: 100px;
+    align-self: center;
+    justify-self: center;
     animation: fadeInRight 0.8s ease 0.6s both;
+}
+
+.transfer-arrow-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 16px;
 }
 
 .transfer-graph-container {
     width: 100%;
-    max-width: 350px;
+    max-width: 400px;
     height: 450px;
     display: flex;
     align-items: center;
@@ -1097,10 +1144,17 @@
 }
 
 /* Responsive Design for Transfer Slide */
-@media (max-width: 1250px) {
-
+@media (min-width: 768px) {
     .transfer-content-right {
-        display: none;
+        height: 200px;
+        width: 200px;
+    }
+}
+
+@media (min-width: 768px) {
+    .transfer-content-right {
+        height: 500px;
+        width: 450px;
     }
 }
 
@@ -1108,11 +1162,6 @@
     .transfer-wrapper {
         grid-template-columns: 1fr;
         gap: 30px;
-    }
-
-    .transfer-content-right {
-
-        display: none;
     }
 
     .transfer-graph-container {
@@ -1129,6 +1178,10 @@
 
     .transfer-content-left {
         text-align: center;
+    }
+
+    .transfer-content-middle {
+        padding-inline: 1.5rem;
     }
 
     .transfer-features-box {
