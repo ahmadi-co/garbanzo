@@ -494,7 +494,7 @@
 
 /* Info Card */
 .hero-section-card {
-    background: var(--first-color);
+    background: hsla(0 0% 100% / 0.13);
     border: 1px solid rgba(255, 255, 255, 0.2);
     width: 155px;
     height: 100%;
