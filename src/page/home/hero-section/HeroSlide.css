@@ -494,7 +494,7 @@
 
 /* Info Card */
 .hero-section-card {
-    background-color: #F2F2F2;
+    background: var(--first-color);
     width: 150px;
     height: 100%;
     align-self: center;
@@ -531,7 +531,7 @@
 
 .hero-section-card-info {
     margin-top: 10px;
-    color: black;
+    color: white;
 }
 
 .hero-section-card-info .hero-section-card-title {
@@ -575,7 +575,8 @@
 @media screen and (min-width: 500px) {
     .hero-section-card {
         width: 210px;
-        padding-block: 1.5rem;
+        padding-inline: 1.5rem;
+        padding-block: .5rem;
     }
 
     .hero-section-card:nth-child(3) {
@@ -606,8 +607,6 @@
 
     .hero-section-card {
         width: 300px;
-        padding-block: 1.5rem;
-        padding-inline: 1.5rem;
     }
 
     .hero-section-card:nth-child(3) {
@@ -669,7 +668,6 @@
 
     .hero-section-card {
         width: 330px;
-        padding-block: 1.5rem;
     }
 
     .hero-section-card:nth-child(3) {

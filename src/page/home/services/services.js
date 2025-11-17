@@ -45,30 +45,30 @@ export default function Services() {
                 {
                     opacity: 1,
                     x: 0,
-                    duration: 1.2,
+                    duration: 1,
                     ease: 'power3.out',
                     scrollTrigger: {
                         trigger: sectionRef.current,
-                        start: 'top 80%',
+                        start: 'top 85%',
                         once: true,
                     },
                 }
             );
 
-            // Animate service cards (staggered)
+            // Animate service cards (quick stagger for snappy effect)
             gsap.fromTo(
                 cardsRef.current,
-                { opacity: 0, y: 60, scale: 0.95 },
+                { opacity: 0, y: 40, scale: 0.97 },
                 {
                     opacity: 1,
                     y: 0,
                     scale: 1,
-                    duration: 1,
+                    duration: 0.7,
                     ease: 'power2.out',
-                    stagger: 0.2,
+                    stagger: 0.05, // very short stagger
                     scrollTrigger: {
                         trigger: sectionRef.current,
-                        start: 'top 75%',
+                        start: 'top 85%',
                         once: true,
                     },
                 }
@@ -77,6 +77,8 @@ export default function Services() {
 
         return () => ctx.revert();
     }, []);
+
+
 
     return (
         <section className="services-container container" id="services" ref={sectionRef}>

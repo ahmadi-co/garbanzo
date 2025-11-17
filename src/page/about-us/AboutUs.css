@@ -1,6 +1,6 @@
 .about-us {
   position: relative;
-  padding: 100px 60px;
+  padding-block: 200px 60px;
 }
 
 /* Animated background elements */
@@ -177,7 +177,7 @@
 
 @media (max-width: 480px) {
   .about-us {
-    padding-block: 200px;
+    padding-block: 70px 200px;
   }
 
   .about-us-title {
