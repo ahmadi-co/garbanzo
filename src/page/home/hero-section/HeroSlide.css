@@ -815,7 +815,7 @@
 }
 
 .atm-sub-headline {
-    font-size: var(--h1-font-size);
+    font-size: calc(var(--h1-font-size) + .5rem);
     font-weight: bold;
     color: #00ffff;
     margin: 0;
@@ -841,11 +841,11 @@
     display: flex;
     flex-direction: row;
     position: relative;
-    max-height: 130px;
+    max-height: 150px;
     border: 2px dashed #ffffff;
     border-radius: 12px;
-    padding: 16px 20px;
-    align-items: end;
+    padding: 16px ;
+    align-items: center;
     gap: 12px;
     animation: fadeInUp 0.6s ease both;
 }
@@ -884,10 +884,11 @@
 .atm-machine-image {
     display: inline-block;
     margin-bottom: 0;
+    transform: translateY(-20%);
 }
 
 .atm-machine-img {
-    width: 300px;
+    width: 400px;
 }
 
 @keyframes fadeInRight {
@@ -943,7 +944,7 @@
 
 .atm-info-text {
     color: #ffffff;
-    font-size: 0.95rem;
+    font-size: var(--normal-font-size);
     line-height: 1.5;
 }
 
@@ -1024,6 +1025,7 @@
 /* Transfer Slide Styles */
 .hero-slide-transfer {
     background: transparent;
+    padding-top: .5rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1110,34 +1112,21 @@
 
 .transfer-tagline {
     color: white;
-    font-size: 0.95rem;
+    font-size: var(--normal-font-size);
     line-height: 1.5;
-    margin: 0;
     opacity: 0.9;
-}
-
-/* Right Side - Arrow Graph */
-.transfer-content-right {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100px;
-    width: 100px;
-    align-self: center;
-    justify-self: center;
-    animation: fadeInRight 0.8s ease 0.6s both;
+    padding-left: 1rem;
+    margin-top: .5rem;
 }
 
 .transfer-arrow-image {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    border-radius: 16px;
 }
 
 .transfer-graph-container {
     width: 100%;
-    max-width: 400px;
     height: 450px;
     display: flex;
     align-items: center;
@@ -1183,21 +1172,6 @@
     border-radius: 16px;
 }
 
-/* Responsive Design for Transfer Slide */
-@media (min-width: 768px) {
-    .transfer-content-right {
-        height: 200px;
-        width: 200px;
-    }
-}
-
-@media (min-width: 768px) {
-    .transfer-content-right {
-        height: 500px;
-        width: 450px;
-    }
-}
-
 @media (max-width: 1250px) {
     .transfer-wrapper {
         grid-template-columns: 1fr;
@@ -1205,7 +1179,6 @@
     }
 
     .transfer-graph-container {
-        max-width: 300px;
         height: 400px;
     }
 }
@@ -1233,7 +1206,6 @@
     }
 
     .transfer-graph-container {
-        max-width: 250px;
         height: 350px;
     }
 }
@@ -1248,13 +1220,10 @@
         font-size: 0.85rem;
     }
 
-    .transfer-tagline {
-        font-size: 0.85rem;
-    }
-
     .transfer-graph-container {
-        max-width: 200px;
-        height: 300px;
+        height: 220px;
+        align-self: center;
+        margin: auto;
     }
 }
 

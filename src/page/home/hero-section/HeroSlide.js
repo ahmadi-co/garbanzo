@@ -139,15 +139,13 @@ const HeroSlide = ({slide, isActive}) => {
                         </div>
 
                         {/* Right Side - Arrow Graph Placeholder */}
-                        <div className="transfer-content-right">
-                            <div className="transfer-graph-container">
-                                <DynamicDotsBackground/>
-                                <img
-                                    src={require('../../../assets/hero-section/hero-section-01.png')}
-                                    alt="Arrow Graph"
-                                    className="transfer-arrow-image"
-                                />
-                            </div>
+                        <div className="transfer-graph-container">
+                            <DynamicDotsBackground/>
+                            <img
+                                src={require('../../../assets/hero-section/hero-section-01.png')}
+                                alt="Arrow Graph"
+                                className="transfer-arrow-image"
+                            />
                         </div>
                     </div>
                 </div>
@@ -192,7 +190,7 @@ const HeroSlide = ({slide, isActive}) => {
 
                             {/* Bottom Info Box */}
                             <div className="atm-info-box atm-info-box-bottom">
-                                <p className="atm-info-text">Need assistance?</p>
+                                <p className="atm-info-text"><strong>Need assistance?</strong></p>
                                 <p className="atm-info-text">CryptoMaster at Your Service.</p>
                             </div>
                         </div>
